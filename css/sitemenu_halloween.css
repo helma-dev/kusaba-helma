@@ -1,0 +1,65 @@
+text/css sitemenu_halloween.css
+ASCII text, with CRLF line terminators
+
+body {
+	margin: 8px;
+}
+
+a {
+	text-decoration: none;
+	color: #CC1105;
+}
+
+h1, h2 {
+	background: #FF8C42;
+	text-align: left;
+}
+
+h1 {
+	margin-top: 0px;
+	font-size: 150%;
+	color: #000;
+}
+
+h2 {
+	margin: 0;
+	font-size: 100%;
+	margin-top: 1em;
+}
+
+.plus {
+	float: right;
+	font-size: 8px;
+	font-weight: normal;
+	padding: 1px 4px 2px 4px;
+	margin: 0px 0px;
+	background: #117743;
+	color: #000;
+	border: 1px solid #da8;
+	cursor: pointer;
+}
+
+.plus:hover {
+	background: #FF80FF;
+	border: 1px solid #c97;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+li {
+	margin: 0px;
+}
+
+li:hover {
+	background: #FFFF80;
+}
+
+li a {
+	display: block;
+	width: 100%;
+}
+

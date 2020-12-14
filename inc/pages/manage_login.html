@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Manage Boards</title>
+	
+	<link rel="shortcut icon" href="{%KU_WEBPATH}/favicon.ico">
+	<link rel="stylesheet" href="{%KU_WEBPATH}/custom/css/common.css">
+	<link rel="stylesheet" href="{%KU_WEBPATH}/custom/css/manage.css">
+</head>
+<body id="page">
+	<form action="?action=login" method="post" id="manage-login" name="managelogin">
+		<table class="table table-sm">
+			<tr>
+				<td><input class="input input-block" type="text" name="username" placeholder="Username" required autofocus></td>
+			</tr>
+			<tr>
+				<td><input class="input input-block" type="password" name="password" placeholder="Password" required></td>
+			</tr>
+			<tr>
+				<td>
+					<button class="btn btn-lg btn-block" type="submit">
+						<i class="icon icon-log-in"></i> Log In
+					</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	<div class="text-center text-small">
+		Re-hashed by altbdoor for Helma<br>
+		<a href="http://kusabax.cultnet.net/">Kusaba X</a> |
+		<a href="http://necolas.github.io/normalize.css/">Normalize</a> |
+		<a href="http://jquery.com/">jQuery</a> |
+		<a href="http://glyphicons.com/">Glyphicons</a>
+	</div>
+	
+	<script>document.documentElement.className+=' css-ready'</script>
+</body>
+</html>

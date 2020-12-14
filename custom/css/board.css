@@ -1,0 +1,116 @@
+/* default style */
+.default {background-color:#eef2ff; color:#000; min-width:320px}
+.default a {color:#34345c}
+.default a:hover {color:#d00}
+
+/* board page */
+.board-page {min-width:320px; padding:5px 5px 10px}
+
+/* common */
+body {position:relative}
+body.sidebar {padding-left:240px}
+a, a:hover {text-decoration:none}
+hr.border {margin:5px 0; border-width:1px 0 0; border-style:solid}
+textarea {resize:vertical}
+
+/* border good friends */
+.border {border-width:0; border-style:solid; border-color:transparent}
+
+/* errors */
+.error {background-color:#f2dede; border:1px solid #eed3d7; color:#b94a48; padding:5px 10px; text-align:center; margin:5px 0}
+
+/* input and btn */
+.input, .btn {
+	height:1.8em; padding:0 4px; color:#111;
+}
+.input-block, .btn-block {width:100%}
+
+.input {line-height:1.8; background-color:#fff; border:1px solid #aaa}
+textarea.input {height:auto; padding:2px 4px}
+/*.input.input-plain {background-color:transparent; border:0; padding:0}
+select.input {vertical-align:bottom}
+
+.btn {}*/
+input[type="file"].btn {padding:0}
+
+/* password */
+#password-form {width:320px; padding:80px 10px 20px; margin:0 auto}
+#password-form-input {width:205px; margin-right:5px}
+#password-form-btn {width:90px}
+
+/* sidebar */
+#sidebar-container {
+	bottom:0; width:240px; background-color:#eef2ff;
+	box-shadow:0 0 10px rgba(0,0,0,0.3); padding:0 10px; line-height:1.5;
+}
+#sidebar-title {margin:0 -10px 5px; background-color:#d6daf0}
+.sidebar-section-title {font-size:1em; margin:10px -10px 5px; padding:0 10px; background-color:#d6daf0}
+.sidebar-section-list > li > i {cursor:pointer}
+
+#sidebar-toggle {line-height:3; width:3em; background-color:#333; color:#fff}
+#sidebar-container, #sidebar-toggle {
+	position:fixed; z-index:200; top:0; left:0;
+	transition:left 0.2s ease
+}
+
+/* news */
+#news-container {padding:15px 10px; max-width:940px; margin:0 auto}
+#news-title > h1, #news-title > h3 {margin:0 0 5px; font-weight:400}
+
+#news-tab {border-bottom-width:1px; padding-left:5px; margin:10px 0}
+#news-tab > li {margin-left:5px}
+#news-tab > li > a {
+	display:block; padding:5px 10px; min-width:50px;
+	border-width:1px; border-bottom:0;
+	border-radius:4px 4px 0 0
+}
+#news-tab > li.active > a {background-color:#d6daf0}
+
+#news-entry > li {margin-bottom:15px}
+.news-entry-title {padding:5px 10px; background-color:#d6daf0}
+.news-entry-content {padding:5px 0; display:inline-flex;}
+.news-entry-content p {margin-top:0}
+
+/* board logo */
+#board-logo {margin:5px 0}
+#board-logo > img {border-width:1px; max-width:100%; height:auto; display:block; margin:0 auto 5px}
+#board-logo > h1 {margin:0}
+
+/* catalog page */
+.catalog-container {margin:0 -5px}
+.catalog-empty {padding:50px 5px}
+.catalog-thread {
+	vertical-align:top; display:inline-block; padding:10px 5px;
+	max-height:320px; width:160px; word-wrap:break-word; overflow:hidden;
+}
+.catalog-thread > a > img {
+	max-width:100%; max-height:150px; width:auto;
+	box-shadow:0 0 5px rgba(0,0,0,0.3)
+}
+.catalog-file, .catalog-removed {display:inline-block; width:100%; padding:20px 0; border-width:1px}
+
+/* footer */
+#footer-timing {margin:10px 0 5px}
+
+/* post box */
+#post-box-form > table {
+	margin:0 auto; width:100%; max-width:480px;
+	border-spacing:2px; border-collapse:separate;
+}
+.post-box-label {width:20%; padding:0 5px}
+.post-box-checkbox {display:inline-block; margin-right:5px}
+.post-box-checkbox > input, .post-box-checkbox > span {vertical-align:middle}
+
+#post-box-rules {margin:0; padding:5px 0 0; list-style:none}
+#post-box-rules > li:before {content:"• "}
+
+/* xs game plan */
+@media (max-width:767px) {
+	/* sidebar magic */
+	body.sidebar {padding-left:0}
+	#sidebar-container {left:-240px}
+	
+	.sidebar.open #sidebar-container {left:0}
+	.sidebar.open #sidebar-toggle {left:240px}
+	
+}

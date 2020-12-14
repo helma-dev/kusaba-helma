@@ -1,0 +1,45 @@
+# follow sym link
+Options -Indexes +FollowSymLinks
+
+# kusaba as directory index
+DirectoryIndex kusaba.php
+
+# set utf8
+AddDefaultCharset utf-8
+
+# set expiry headers for html
+#<IfModule mod_headers.c>
+#<Files *.html>
+#Header add Expires "Mon, 26 Jul 1997 05:00:00 GMT"
+#Header add Pragma "no-cache"
+#Header add Cache-Control "max-age=0; must-revalidate; no-cache"
+#Header set Expires "0"
+#Header unset Vary
+#</Files>
+#</IfModule>
+
+# prevent access to spam.txt
+<Files spam.txt>
+	order allow,deny
+	deny from all
+</Files>
+
+# error pages
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+# open rewrite engine
+RewriteEngine on
+
+# all pages, which are html, needs a password
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} [^4][^0][^4]\.html$
+RewriteRule ^ router.php?action=password [L]
+
+# gz handler has to be disabled for now
+#RewriteCond %{REQUEST_FILENAME} (.*)\.(html|css|js)$
+#RewriteCond %{REQUEST_FILENAME} -f
+#RewriteRule ^ gzhandler.php [L]
+
+# Warning: Contents below this line may be erased, please place all .htaccess rules above this line
+## !KU_BANS:

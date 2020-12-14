@@ -1,0 +1,17 @@
+# windows thumbs
+[Tt]humbs.db
+
+# will be automatically generated
+modlogrss.xml
+
+# winmerge backup
+*.bak
+
+# update files
+update.zip
+update.7z
+update/*
+
+# menu files
+menu.html
+menu_dirs.html

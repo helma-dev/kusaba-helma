@@ -1,0 +1,25 @@
+<script>
+	{literal}!function(s){Array.prototype.forEach.call("{/literal}{%KU_STYLES}{literal}".split(":"),function(t){document.write('<link rel="'+(t==s?"":"alternate ")+'stylesheet" href="/custom/css/board_'+t+'.css" id="css-board-'+t+'" class="css-board">')})}(localStorage.getItem("lscache-main-style")||"{/literal}{%KU_DEFAULTSTYLE}");
+</script>
+
+<noscript>
+<link rel="stylesheet" href="/custom/css/board_burichan.css">
+</noscript>
+
+{*
+{loop $styles}
+<link rel="alternate stylesheet" href="{%KU_WEBPATH}/custom/css/board_{$}.css" id="css-board-{$}" class="css-board">
+{/loop}
+
+{literal}
+<script>
+	(function (selected) {
+		Array.prototype.forEach.call('{%KU_STYLES}'.split(':'), function (item) {
+			document.write('<link rel="' + (item == selected ? '' : 'alternate ') + 'stylesheet" href="/custom/css/board_' + item + '.css" id="css-board-' + item + '" class="css-board">')
+		});
+	})(localStorage.getItem('lscache-main-style') || '{%KU_DEFAULTSTYLE}');
+	
+	{literal}!function(s){Array.prototype.forEach.call("{/literal}{%KU_STYLES}{literal}".split(":"),function(t){document.write('<link rel="'+(t==s?"":"alternate ")+'stylesheet" href="/custom/css/board_'+t+'.css" id="css-board-'+t+'" class="css-board">')})}(localStorage.getItem("lscache-main-style")||"{/literal}{%KU_DEFAULTSTYLE}");
+</script>
+{/literal}
+*}
