@@ -133,7 +133,7 @@
 <div class="footer" style="clear: both;">
 	{* I'd really appreciate it if you left the link to kusabax.org in the footer, if you decide to modify this. That being said, you are not bound by license or any other terms to keep it there *}
 	{if $executiontime neq ''} - {/if}
-	<a href="http://kusabax.cultnet.net/" target="_top">kusaba x {%KU_VERSION}</a>
+	<a href="https://github.com/helma-dev/kusaba-helma" target="_top">kusaba-helma</a>
 	{if $executiontime neq ''} + {t}Took{/t} {$executiontime}s - {/if}
 	{if $botads neq ''}
 		<div class="content ads">

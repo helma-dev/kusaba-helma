@@ -13,7 +13,7 @@
 {else}
 
 <a name="bottom"></a>
-All trademarks and copyrights on this page are owned by their respective parties. Images uploaded are the responsibility of the Poster. Comments are owned by the Poster.
+<div class="copyrightdisclaimer" style="text-align: center;font-size: small;">All trademarks and copyrights on this page are owned by their respective parties. Images uploaded are the responsibility of the Poster. Comments are owned by the Poster.</div>
 
 <iframe id="old-shim-iframe" frameborder="0"></iframe>
 

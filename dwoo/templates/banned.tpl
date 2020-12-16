@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>{t}YOU ARE BANNED{/t}!</title>
-<link rel="stylesheet" type="text/css" href="{%KU_BOARDSPATH}/css/site_futaba.css" title="Futaba">
+<link rel="stylesheet" type="text/css" href="{%KU_BOARDSPATH}/css/site_burichan.css" title="Burichan">
 <link rel="shortcut icon" href="{%KU_WEBPATH}/favicon.ico">
 </head>
 <body>
