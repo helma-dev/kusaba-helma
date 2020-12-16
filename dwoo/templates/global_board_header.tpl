@@ -30,6 +30,8 @@
 <meta http-equiv="Content-Type" content="text/html;charset={%KU_CHARSET}" />
 <script type="text/javascript" src="{$cwebpath}lib/javascript/gettext.js"></script>
 
+<script type="text/javascript" src="{$cwebpath}lib/javascript/js.cookies.js"></script>
+
 <!-- old shim -->
 <script src="/custom/js/old_shim.js"></script>
 <link rel="stylesheet" href="/custom/css/old_shim.css">
