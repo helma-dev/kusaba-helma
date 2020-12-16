@@ -63,7 +63,7 @@ class Bans {
 
 		if ($force_display) {
 			/* Instructed to display a page whether banned or not, so we will inform them today is their rucky day */
-			echo '<title>'._gettext('YOU ARE NOT BANNED!').'</title><div align="center"><img src="'. KU_WEBFOLDER .'/custom/img/youarenotbanned.jpg"><br /><br />'._gettext('Unable to find record of your IP being banned.').'</div>';
+			echo '<title>'._gettext('YOU ARE NOT BANNED!').'</title><div align="center"><img src="/custom/img/youarenotbanned.jpg"><br /><br />'._gettext('Unable to find record of your IP being banned.').'</div>';
 		} else {
 			return true;
 		}
