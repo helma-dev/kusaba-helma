@@ -3,6 +3,8 @@
 [<a href="/custom/pastebin.txt" target="_blank">Pastebin</a>] 
 [<a href="https://www.karlsland.net/sw/" target="_blank">Karlsland.net Imageboard</a>]
 <b>Ventrilo:</b> [Texas2.MaxFrag.net 4126 Pass: mikan] 
+<b>Archive:</b> [<a href="https://archive.helma.xyz/{$board.name}/" target="_blank">Current Board</a>] 
+[<a href="https://archive.helma.xyz/archive.html" target="_blank">Index</a>] 
 <HR>
 </body>
 <div class="postarea">
