@@ -37,6 +37,7 @@
 				<li><a href="javascript:void(0)" id="sidebar-remove-frame">Remove Frames</a></li>
 			*}
 			<li><a href="https://archive.helma.xyz/">Helma.us Archive</a></li>
+			<li><a href="mailto:">Contact</a></li>
 		</ul>
 		
 		{foreach name=sections item=sect from=$boards}

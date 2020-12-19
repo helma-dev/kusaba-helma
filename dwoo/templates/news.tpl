@@ -52,6 +52,11 @@
 				<div class="news-entry-title clear">
 					<span class="float-left">
 						<b>{$entry.subject|stripslashes}</b>
+
+						{if $page eq 'news'}
+							by <b>{$entry.poster|stripslashes}</b> ({$entry.timestamp|date_format:"%b %d %Y %H:%M %Z"})
+						{/if}
+
 					</span>
 					<a href="#{$page}-{$entry.id}" class="float-right">#</a>
 				</div>

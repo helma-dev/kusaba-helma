@@ -42,22 +42,22 @@ $dwoo_data->assign('topads', $topads);
 $dwoo_data->assign('botads', $botads);*/
 
 // get the type of page
-// helma default
-//$page = isset($_GET['p']) ? $_GET['p'] : '';
-//$entries = null;
+// kusaba-helma
+$page = isset($_GET['p']) ? $_GET['p'] : '';
+$entries = null;
 
-//if ($page == 'links') {
-//	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 1 ORDER BY `order` ASC');
-//}
-//else if ($page == 'rules') {
-//	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 2 ORDER BY `order` ASC');
-//}
-//else {
-//	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 0 ORDER BY `timestamp` DESC');
-//	$page = 'news';
-//}
+if ($page == 'links') {
+	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 1 ORDER BY `order` ASC');
+}
+else if ($page == 'rules') {
+	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 2 ORDER BY `order` ASC');
+}
+else {
+	$entries = $tc_db->GetAll('SELECT `id`, `subject`, `poster`, `timestamp`, `message` FROM `front` WHERE `page` = 0 ORDER BY `timestamp` DESC');
+	$page = 'news';
+}
 
-//$dwoo_data->assign('page', $page);
+$dwoo_data->assign('page', $page);
 
 // we'll handle styles our way
 //$styles = explode(':', KU_MENUSTYLES);
@@ -66,16 +66,16 @@ $dwoo_data->assign('botads', $botads);*/
 // why?
 //$dwoo_data->assign('ku_webpath', getCWebPath());
 
-//kusaba x default
-if (!isset($_GET['p'])) $_GET['p'] = '';
+//vanilla
+//if (!isset($_GET['p'])) $_GET['p'] = '';
 
-if ($_GET['p'] == 'links') {
-	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 1 ORDER BY `order` ASC");
-} elseif ($_GET['p'] == 'rules') {
-	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 2 ORDER BY `order` ASC");
-} else {
-	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 0 ORDER BY `timestamp` DESC");
-}
+//if ($_GET['p'] == 'links') {
+//	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 1 ORDER BY `order` ASC");
+//} elseif ($_GET['p'] == 'rules') {
+//	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 2 ORDER BY `order` ASC");
+//} else {
+//	$entries = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "front` WHERE `page` = 0 ORDER BY `timestamp` DESC");
+//}
 
 
 // sideload attempts
