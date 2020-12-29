@@ -2,12 +2,9 @@
 #
 #   Strike Witches Media Info
 #
-#   Last updated: 14 November 2016
+#   Last updated: 29 December 2020
 #
-#   Currently busy dev-ing the new
-#   Helma. Updates are on hold. Drop
-#   by to say hello!
-#   http://helma.us/sw/res/7379.html
+#   https://www.helma.xyz/sw/
 #
 ########################################
  _______________________________________
@@ -29,36 +26,59 @@
 --&gt; # Anime #
 ========================================
 OVA
-    [Nekomimi] - http://www.nyaa.se/?page=view&tid;=39947
+	[Moozzi2][1080][includes S1] - https://nyaa.si/view/802308
+    [Nekomimi] - https://nyaa.si/view/39947
 
 Season 1
-    [Coalgirls][720] - http://www.nyaa.se/?page=view&tid;=146948
-    [Underwater][DVD] - http://www.nyaa.se/?page=view&tid;=59556
+	[Moozzi2][1080] - https://nyaa.si/view/802308
+    [Coalgirls][720] - https://nyaa.si/view/146948
+    [Underwater][DVD] - https://nyaa.si/view/59556
+	[anime4life.][1080] - https://nyaa.si/view/951385
 
 Season 2
-    [Coalgirls][720] - http://www.nyaa.se/?page=view&tid;=197052
-    [Coalgirls][1080] - http://www.nyaa.se/?page=view&tid;=197053
-    [Underwater][720] - http://www.nyaa.se/?page=view&tid;=160688
+	[Coalgirls][1080] - https://nyaa.si/view/197053
+    [Coalgirls][720] - https://nyaa.si/view/197052
+	[anime4life.][1080] - https://nyaa.si/view/951585
+
+Season 1 + Season 2 + OVA
+	[philosophy-raws][720] - https://nyaa.si/view/376044
 
 Movie
-    [Coalgirls][720] - http://www.nyaa.se/?page=view&tid;=373363
-    [Coalgirls][1080] - http://www.nyaa.se/?page=view&tid;=373364
-    [Underwater][720] - http://www.nyaa.se/?page=view&tid;=371882
-    [Underwater][1080] - http://www.nyaa.se/?page=view&tid;=371883
+    [Coalgirls][1080] - https://nyaa.si/view/373364
+    [Coalgirls][720] - https://nyaa.si/view/373363
+    [Underwater][1080] - https://nyaa.si/view/371883
+    [Underwater][720] - https://nyaa.si/view/371882
+	[anime4life.][1080] - https://nyaa.si/view/951718
+	
+Operation Victory Arrow (OVA) 	
+	[Coalgirls][1080] - https://nyaa.si/view/796952
+	[Coalgirls][720] - https://nyaa.si/view/771734
+    [Eila][1080][Volume 1] - https://nyaa.si/view/668017
+    [Eila][1080][Volume 2] - https://nyaa.si/view/670080
+    [Eila][1080][Volume 3] - https://nyaa.si/view/722323
+	
+Brave Witches
+	[Eila][1080] - https://nyaa.si/view/1008821
+	[Eila][720] - https://nyaa.si/view/1010942
 
-Operation Victory Arrow (OVA) Vol. 01
-    [Eila][1080] - http://www.nyaa.se/?page=download&tid;=668017
-    Rough Translations [ASS] - http://www.nyaa.se/?page=view&tid;=637347
-    Rough Translations [1080] - http://www.nyaa.se/?page=view&tid;=637441
-    (Youtube link taken down due to copyright)
+501st JFW Take Off! (Short)
+	[Eila][720][Episode 1] - https://nyaa.si/view/1136189
+	[Eila][720][Episode 2] - https://nyaa.si/view/1138269
+	[Eila][720][Episode 3] - https://nyaa.si/view/1140307
+	[Eila][720][Episode 4] - https://nyaa.si/view/1142833
+	[Eila][720][Episode 5] - https://nyaa.si/view/1149299
+	[Eila][720][Episode 6] - https://nyaa.si/view/1157368
+	[Moozzi2][1080][Raw] - https://nyaa.si/view/1162664
+	[Erai-Raws][720] - https://nyaa.si/view/1181872
+	[Erai-Raws][1080] - https://nyaa.si/view/1181871
+	
+501st JFW Take Off! Movie
+	[ForFuni'sSake][1080] - https://nyaa.si/view/1280274
+	[Erai-Raws][1080] - https://nyaa.si/view/1291991
 
-Operation Victory Arrow (OVA) Vol. 02
-    [Eila][1080] - http://www.nyaa.se/?page=download&tid;=668020
-    (Youtube link taken down due to copyright)
-
-Operation Victory Arrow (OVA) Vol. 03
-    (Youtube link taken down due to copyright)
-
+Season 3 (Road to Berlin)
+	[Eila][1080][Simulcast] - https://nyaa.si/view/1319985
+	[BD] - Soon
 
 ========================================
 --&gt; # Audio Drama #
@@ -66,32 +86,32 @@ Operation Victory Arrow (OVA) Vol. 03
 Himegoe
     Volume 1, Mio Sakamoto, Perrine H. Clostermann
     Download - http://www.mediafire.com/?lffl70r8l22hlt3
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_1_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_1_Translation
 
     Volume 2, Lynette Bishop, Gertrud Barkhorn
     Download - http://www.mediafire.com/?28xlkzgizysgucg
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_2_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_2_Translation
 
     Volume 3, Charlotte E. Yeager, Francesca Lucchini
     Download - http://www.mediafire.com/?2969r5q4lm9locl
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_3_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_3_Translation
 
     Volume 4, Minna-Dietlinde Wilcke, Erica Hartmann
     Download - http://www.mediafire.com/?7hhzljacm2nnc7m
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_4_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_4_Translation
 
     Volume 5, Eila Ilmatar Juutilainen, Sanya V. Litvyak
     Download - http://www.mediafire.com/?kgrjoy4awy5fkpk
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_5_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_5_Translation
 
     Volume 6, Yoshika Miyafuji
     Download - http://www.mediafire.com/?g7kmx7tead9s7f5
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_6_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_6_Translation
 
 Himegoe 2
     Volume 1, Junko Takei, Yoshika Miyafuji, Lynette Bishop
     Download - http://www.mediafire.com/?sarjcap069p
-    Translation - http://strikewitches.wikia.com/wiki/Himegoe_CDII_1_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Himegoe_CDII_1_Translation
 
     Volume 2, Fernandia Malvezzi, Gertrud Barkhorn, Charlotte E. Yeager
     Download - http://www.mediafire.com/?4z1d419ihf4
@@ -111,23 +131,23 @@ Himegoe 2
 Hime Uta
     Collection 1, Yoshika Miyafuji, Mio Sakamoto
     Download - http://www.mediafire.com/?0wdwjftb5qcid68
-    Translation - http://strikewitches.wikia.com/wiki/Hime_Uta_1_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Hime_Uta_1_Translation
 
     Collection 2, Sanya V. Litvyak, Eila Ilmatar Juutilainen
     Download - http://www.mediafire.com/?gu9b274dt77fnrz
-    Translation - http://strikewitches.wikia.com/wiki/Hime_Uta_2_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Hime_Uta_2_Translation
 
     Collection 3, Minna-Dietlinde Wilcke, Erica Hartmann, Gertrud Barkhorn
     Download - http://www.mediafire.com/?zzv4wtbtld3bamy
-    Translation - http://strikewitches.wikia.com/wiki/Hime_Uta_3_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Hime_Uta_3_Translation
 
     Collection 4, Perrine H. Clostermann, Lynette Bishop, Yoshika Miyafuji
     Download - http://www.mediafire.com/?54hw6ydcfh36xht
-    Translation - http://strikewitches.wikia.com/wiki/Hime_Uta_4_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Hime_Uta_4_Translation
 
     Collection 5, Francesca Lucchini, Charlotte E. Yeager
     Download - http://www.mediafire.com/?tuh6rr7jl69hl6l
-    Translation - http://strikewitches.wikia.com/wiki/Hime_Uta_5_Translation
+    Translation - http://worldwitches.fandom.com/wiki/Hime_Uta_5_Translation
 
 Movie Hime Uta
     Collection 1, Sanya V. Litvyak, Eila Ilmatar Juutilainen, Heidemarie W. Schnaufer
@@ -147,24 +167,24 @@ Movie Hime Uta
 
 Himebana
     Volume 1 - http://www.mediafire.com/?i7a08xriocd5njr
-    Translation - http://strikewitches.wikia.com/wiki/Himebana_1
+    Translation - http://worldwitches.fandom.com/wiki/Himebana_1
 
     Volume 2 - http://www.mediafire.com/?mqj30rm26pxr3r3
-    Translation - http://strikewitches.wikia.com/wiki/Himebana_2
+    Translation - http://worldwitches.fandom.com/wiki/Himebana_2
 
     Volume 3
-    Translation - http://strikewitches.wikia.com/wiki/Himebana_3
+    Translation - http://worldwitches.fandom.com/wiki/Himebana_3
 
 Himeroku:
-    CD 1 - http://strikewitches.wikia.com/wiki/Himeroku_1
+    CD 1 - http://worldwitches.fandom.com/wiki/Himeroku_1
     CD 2
 
 Starlight Stream
     Volume 1 - http://www.mediafire.com/?94t8vqh06x89djt
-    Translation - http://strikewitches.wikia.com/wiki/STRIKE_WITCHES_Starlight_Stream
+    Translation - http://worldwitches.fandom.com/wiki/STRIKE_WITCHES_Starlight_Stream
 
     Volume 2 - http://www.mediafire.com/?r8rpo34rot6wpph
-    Translation - http://strikewitches.wikia.com/wiki/STRIKE_WITCHES_Starlight_Stream_2
+    Translation - http://worldwitches.fandom.com/wiki/STRIKE_WITCHES_Starlight_Stream_2
 
 501st JFW.OA Radio Witches
     Listen - http://seiyuradio32.blog25.fc2.com/blog-category-119.html
@@ -190,8 +210,10 @@ Movie
     Strike Witches Theatrical Anime Theme Song Collection - https://mega.co.nz/#!XUZy0Y7S!d-AShfih_MZbs6Enx0kimerDBiMfsf3iLqCF3P-ugIU
 
 Operation Victory Arrow (OVA)
-    Strike Witches OVA OP Single - http://www.nyaa.se/?page=view&tid;=599868
-    
+    Strike Witches OVA OP Single - https://nyaa.si/view/599868
+	Strike Witches OVA OP Single (DDL) - https://pan.baidu.com/s/1ntNZjFr
+	Strike Witches Operation Victory Arrow Vol.3 Arnhem No Hashi Hime Uta Collection - https://workupload.com/file/KvgwVaPpcu3
+	
 
 ========================================
 --&gt; # Official Doujinshi #
@@ -227,14 +249,14 @@ Sengoku Witches Honnoji no Maho
 ========================================
 Strike Witches: Suomus Misfits Squadron (Suomus Iranko Chutai)
         Volume 1 - http://www.baka-tsuki.org/project/index.php?title=Strike_Witches#Volume_1_-_Suomus_Misfits_Squadron_Moving_Up
-        Volume 2 - http://strikewitches.wikia.com/wiki/Suomus_Misfits_Squadron_in_Love
-    (!) Volume 3 - http://strikewitches.wikia.com/wiki/Clash_in_the_Suomus_Misfits_Squadron
+        Volume 2 - http://worldwitches.fandom.com/wiki/Suomus_Misfits_Squadron_in_Love
+    (!) Volume 3 - http://worldwitches.fandom.com/wiki/Clash_in_the_Suomus_Misfits_Squadron
 
 Strike Witches: Maidens' Volume (Otome no Maki)
    (!!) Volume 1
-    (!) Volume 2 - http://strikewitches.wikia.com/wiki/Otome_no_Maki_-_Volume_2
+    (!) Volume 2 - http://worldwitches.fandom.com/wiki/Otome_no_Maki_-_Volume_2
    (!!) Volume 3
-        Volume 4 - http://strikewitches.wikia.com/wiki/Otome_no_Maki_4_Chapter_4
+        Volume 4 - http://worldwitches.fandom.com/wiki/Otome_no_Maki_4_Chapter_4
 
 Strike Witches: Der Stern von Afrika
         Der Stern von Afrika - http://www.baka-tsuki.org/project/index.php?title=Strike_Witches:Afrika
@@ -251,6 +273,8 @@ Strike Witches Short-Shorts: After the Sky
 Strike Witches 2 Visual Short Story
 
 Strike Witches the Movie Visual Short Story
+
+Brave Witches Prequel LN
 
  (!) = Partially translated
 (!!) = Not translated
@@ -394,6 +418,26 @@ Strike Witches: Kurenai no Majotachi
         Chapter 5 - http://www.mediafire.com/?f5z77q1w5ygnw7g
         Chapter 6 - http://www.mediafire.com/?legmxjbbjk666xa
 
+Brave Witches Prequel Manga 
+	Translated
+		Chapter 00 - http://www.mediafire.com/file/bcbx6zux3f0cqu1/Prequel_00.zip
+			Mirror - https://workupload.com/file/R4XEWAGpFPU
+		Chapter 01 - http://www.mediafire.com/file/yh2n9x4pn70nj7i/Prequel_01.zip
+			Mirror - https://workupload.com/file/H9uqQMCjPQQ
+		Chapter 02 - http://www.mediafire.com/file/gj4ejaka7a7bpwu/Prequel_02.zip
+			Mirror - https://workupload.com/file/ydazfK3rkL9
+		Chapter 03 - http://www.mediafire.com/file/zjmirympqlnct02/Prequel_03.zip
+			Mirror - https://workupload.com/file/JKAd6Ft5TUG
+		Chapter 04 - http://www.mediafire.com/file/h4mv9adc4m0y6h4/Prequel_04.zip
+			Mirror - https://workupload.com/file/9LdGDJvuq9M
+		Chapter 05 - http://www.mediafire.com/file/w9txbt6wawabbuc/Prequel%2005.zip
+			Mirror - https://workupload.com/file/XU4jq2T6S3T
+		Chapter 06 - http://www.mediafire.com/file/0jdrnhh7pq0533a/Prequel%2006.zip
+			Mirror - https://workupload.com/file/ewcqz2NhsX4
+		Chapter 07 - https://workupload.com/file/DMkwTssVckm
+		Chapter 08 - https://workupload.com/file/vQ3K6uVdBf4
+		[Batch] Chapter 00-08 - https://workupload.com/archive/32EQCzza
+
 
 ========================================
 --&gt; # Art Books #
@@ -426,15 +470,15 @@ Kazuhiro Takamura Animation Works
 ========================================
 --&gt; # Humikane Twitter Short Stories #
 ========================================
-        502nd JFW     - http://strikewitches.wikia.com/wiki/502nd_Twitter_Story_Translation
-    (!) 504th JFW     - http://strikewitches.wikia.com/wiki/504th_Twitter_Story_Translation
-        Heidemarie    - http://strikewitches.wikia.com/wiki/Heidemarie_Twitter_Story_Translation
-   (!!) Hertta        - http://strikewitches.wikia.com/wiki/Hertta_Twitter_Story_Japanese
-        Seiza         - http://strikewitches.wikia.com/wiki/Seiza_Story_Translation
-   (!!) Tomoko        - http://strikewitches.wikia.com/wiki/Tomoko_Story_Japanese
-        24th Squadron - http://strikewitches.wikia.com/wiki/24th_Squadron_Story
-        Nishizawa     - http://strikewitches.wikia.com/wiki/Nishizawa_Story_Translation
-    (!) Kuroda        - http://strikewitches.wikia.com/wiki/Kuroda_short_story
+        502nd JFW     - http://worldwitches.fandom.com/wiki/502nd_Twitter_Story_Translation
+    (!) 504th JFW     - http://worldwitches.fandom.com/wiki/504th_Twitter_Story_Translation
+        Heidemarie    - http://worldwitches.fandom.com/wiki/Heidemarie_Twitter_Story_Translation
+   (!!) Hertta        - http://worldwitches.fandom.com/wiki/Hertta_Twitter_Story_Japanese
+        Seiza         - http://worldwitches.fandom.com/wiki/Seiza_Story_Translation
+   (!!) Tomoko        - http://worldwitches.fandom.com/wiki/Tomoko_Story_Japanese
+        24th Squadron - http://worldwitches.fandom.com/wiki/24th_Squadron_Story
+        Nishizawa     - http://worldwitches.fandom.com/wiki/Nishizawa_Story_Translation
+    (!) Kuroda        - http://worldwitches.fandom.com/wiki/Kuroda_short_story
 
  (!) = Partially translated
 (!!) = Not translated
@@ -444,7 +488,7 @@ Kazuhiro Takamura Animation Works
 --&gt; # Games #
 ========================================
 Strike Witches: What I Can Do Along With You - A Little Peaceful Days (Anata to Dekiru Koto - A Little Peaceful Days)
-    Information - http://strikewitches.wikia.com/wiki/User:Nipa%27s_Weasel/PS2_Game
+    Information - http://worldwitches.fandom.com/wiki/User:Nipa%27s_Weasel/PS2_Game
     CG Download - http://www.mediafire.com/?26d82y8jfjuv428
 
 Strike Witches: Blitz in the Blue Sky - New Commander Struggles! (Soku no Dengekisen - Shin Taicho Funtosuru!)
@@ -453,16 +497,16 @@ Strike Witches: Silver Wings (Hakugin no Tsubasa)
     Installation instructions - http://www.mediafire.com/?5j4hwofi6oj59
 
 Strike Witches 2: Iyasu, Naosu, Puni Puni Suru
-    Information - http://strikewitches.wikia.com/wiki/User:Nipa%27s_Weasel/2nd_DS_Game
+    Information - http://worldwitches.fandom.com/wiki/User:Nipa%27s_Weasel/2nd_DS_Game
 
 
 ========================================
 --&gt; # Additional Links #
 ========================================
 Most of the information are from
-    http://strikewitches.wikia.com/wiki/Strike_Witches_Wiki
-    http://strikewitches.wikia.com/wiki/Translation_Statuses
-    http://strikewitches.wikia.com/wiki/Strike_Witches#Media
+    http://worldwitches.fandom.com/wiki/Strike_Witches_Wiki
+    http://worldwitches.fandom.com/wiki/Translation_Statuses
+    http://worldwitches.fandom.com/wiki/Strike_Witches#Media
 
 Most of the files can be found in here (commonly known as mangafoxlite)
     http://www.mediafire.com/mangafoxlite
@@ -477,7 +521,9 @@ Strike Witch generator
     V1 - http://seventenths.byethost22.com/generator/generate.php
     
 SW imageboard
-    http://helma.us/sw/
+    http://helma.us/sw/ (;_;7)
+	http://helma.xyz/sw/
+	http://www.karlsland.net/sw/ (Chinese)
     
 An open scanlation website working on a number of SW manga
     http://yuriproject.net/
@@ -487,7 +533,8 @@ An Anon worked on a SW game, named Star Witches
     Play (Requires Unity Web Player) - https://dl.dropboxusercontent.com/u/79944735/webversion.html
     
 An Anon made a SW sorter
-    http://swsort.sne.jp/
+    http://swsort.sne.jp/ (Dead link)
+	https://atlcou.github.io/sw_sort/
 
 A mish-mash of things I backed up for SW
     http://www.mediafire.com/folder/64apa337ceb1s
