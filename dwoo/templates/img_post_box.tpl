@@ -5,8 +5,8 @@
 <b>Ventrilo:</b> [Texas2.MaxFrag.net 4126 Pass: mikan] 
 <b>Archive:</b> [<a href="https://archive.helma.xyz/{$board.name}/" target="_blank">Current Board</a>] 
 [<a href="https://archive.helma.xyz/" target="_blank">Index</a>] 
-<HR>
-</body>
+<hr> 
+
 <div class="postarea">
 <a id="postbox"></a>
 <form name="postform" id="postform" action="{%KU_CGIPATH}/board.php" method="post" enctype="multipart/form-data"
@@ -35,7 +35,7 @@
 		<td class="postblock">
 			{t}Email{/t}</td>
 		<td>
-			<input type="text" name="em" size="28" maxlength="75" accesskey="e" />
+			<input type="text" name="em" size="28" maxlength="75" accesskey="e" /> <input type="button" class="sub_btn" value="{t}↓{/t}" onclick="document.postform.em.value='sage'" onmouseover="Tip('{t}Instant Sage{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	<tr>
@@ -58,7 +58,12 @@
 			{t}Message{/t}
 		</td>
 		<td>
-			<textarea name="message" cols="48" rows="4" accesskey="m"></textarea>
+			<textarea name="message" cols="48" rows="4" accesskey="m"></textarea><br />
+			<input type="button" class="sub_btn" name="addbbcode0" value="{t}B{/t}" onclick="bbstyle(0)" onmouseover="Tip('{t}Bold{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="addbbcode2" value="{t}I{/t}" onclick="bbstyle(2)" onmouseover="Tip('{t}Italic{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="addbbcode4" value="{t}U{/t}" onclick="bbstyle(4)" onmouseover="Tip('{t}Underline{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="addbbcode8" value="{t}S{/t}" onclick="bbstyle(8)" onmouseover="Tip('{t}Strikethrough{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="addbbcode18" value="{t}H{/t}" onclick="bbstyle(18)" onmouseover="Tip('{t}Spoiler{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	{if $board.enablecaptcha eq 1}
@@ -70,7 +75,7 @@
 	{if $board.uploadtype eq 0 || $board.uploadtype eq 1}
 		<tr>
 			<td class="postblock">
-				{t}File{/t}
+				<span style="border-bottom: 1px dotted" onmouseover="Tip('{t}GIF, JPG, PNG, WebM. Maximum 8000 KB.{/t}')" onmouseout="UnTip()">{t}File{/t}</span>
 			</td>
 			<td>
 			<input type="file" name="imagefile" size="35" accesskey="f" />
@@ -107,7 +112,7 @@
 		<tr id="passwordbox"><td></td><td></td></tr>
 		<tr>
 			<td colspan="2" class="rules">
-				<ul style="margin-left: 0; margin-top: 0; margin-bottom: 0; padding-left: 0;">
+				<ul style="margin-left: 0; margin-top: 0; margin-bottom: 0; padding-left: 0;" class="ruleset">
 					<li>{t}Supported file types are{/t}:
 					{if $board.filetypes_allowed neq ''}
 						{foreach name=files item=filetype from=$board.filetypes_allowed}
@@ -124,11 +129,11 @@
 						<a href="{%KU_BOARDSFOLDER}{$board.name}/catalog.html">{t}View catalog{/t}</a>
 					{/if}
 					</li>
+				<br />
 				</ul>
 			{if %KU_BLOTTER && $blotter}
-				<br />
-				<ul style="margin-left: 0; margin-top: 0; margin-bottom: 0; padding-left: 0;">
-				<li style="position: relative;">
+				<div style="margin-left: 0; margin-top: 0; margin-bottom: 0; padding-left: 0;" class="blotter1">
+				<div style="position: relative;" class="blotter2">
 					<span style="color: red;">
 				{t}Blotter updated{/t}: {$blotter_updated|date_format:"%Y-%m-%d"}
 				</span>

@@ -2,9 +2,9 @@
 #
 #   Strike Witches Media Info
 #
-#   Last updated: 29 December 2020
+#   Last updated: 10 February 2021
 #
-#   https://www.helma.xyz/sw/
+#   https://www.helma.xyz/custom/pastebin.txt
 #
 ########################################
  _______________________________________
@@ -27,35 +27,35 @@
 ========================================
 OVA
 	[Moozzi2][1080][includes S1] - https://nyaa.si/view/802308
-    [Nekomimi] - https://nyaa.si/view/39947
+	[Nekomimi] - https://nyaa.si/view/39947
 
 Season 1
 	[Moozzi2][1080] - https://nyaa.si/view/802308
-    [Coalgirls][720] - https://nyaa.si/view/146948
-    [Underwater][DVD] - https://nyaa.si/view/59556
+	[Coalgirls][720] - https://nyaa.si/view/146948
+	[Underwater][DVD] - https://nyaa.si/view/59556
 	[anime4life.][1080] - https://nyaa.si/view/951385
 
 Season 2
 	[Coalgirls][1080] - https://nyaa.si/view/197053
-    [Coalgirls][720] - https://nyaa.si/view/197052
+	[Coalgirls][720] - https://nyaa.si/view/197052
 	[anime4life.][1080] - https://nyaa.si/view/951585
 
 Season 1 + Season 2 + OVA
 	[philosophy-raws][720] - https://nyaa.si/view/376044
 
 Movie
-    [Coalgirls][1080] - https://nyaa.si/view/373364
-    [Coalgirls][720] - https://nyaa.si/view/373363
-    [Underwater][1080] - https://nyaa.si/view/371883
-    [Underwater][720] - https://nyaa.si/view/371882
+	[Coalgirls][1080] - https://nyaa.si/view/373364
+	[Coalgirls][720] - https://nyaa.si/view/373363
+	[Underwater][1080] - https://nyaa.si/view/371883
+	[Underwater][720] - https://nyaa.si/view/371882
 	[anime4life.][1080] - https://nyaa.si/view/951718
 	
 Operation Victory Arrow (OVA) 	
 	[Coalgirls][1080] - https://nyaa.si/view/796952
 	[Coalgirls][720] - https://nyaa.si/view/771734
-    [Eila][1080][Volume 1] - https://nyaa.si/view/668017
-    [Eila][1080][Volume 2] - https://nyaa.si/view/670080
-    [Eila][1080][Volume 3] - https://nyaa.si/view/722323
+	[Eila][1080][Volume 1] - https://nyaa.si/view/668017
+	[Eila][1080][Volume 2] - https://nyaa.si/view/670080
+	[Eila][1080][Volume 3] - https://nyaa.si/view/722323
 	
 Brave Witches
 	[Eila][1080] - https://nyaa.si/view/1008821
@@ -210,7 +210,7 @@ Movie
     Strike Witches Theatrical Anime Theme Song Collection - https://mega.co.nz/#!XUZy0Y7S!d-AShfih_MZbs6Enx0kimerDBiMfsf3iLqCF3P-ugIU
 
 Operation Victory Arrow (OVA)
-    Strike Witches OVA OP Single - https://nyaa.si/view/599868
+	Strike Witches OVA OP Single - https://nyaa.si/view/599868
 	Strike Witches OVA OP Single (DDL) - https://pan.baidu.com/s/1ntNZjFr
 	Strike Witches Operation Victory Arrow Vol.3 Arnhem No Hashi Hime Uta Collection - https://workupload.com/file/KvgwVaPpcu3
 	
@@ -420,24 +420,30 @@ Strike Witches: Kurenai no Majotachi
 
 Brave Witches Prequel Manga 
 	Translated
-		Chapter 00 - http://www.mediafire.com/file/bcbx6zux3f0cqu1/Prequel_00.zip
-			Mirror - https://workupload.com/file/R4XEWAGpFPU
-		Chapter 01 - http://www.mediafire.com/file/yh2n9x4pn70nj7i/Prequel_01.zip
-			Mirror - https://workupload.com/file/H9uqQMCjPQQ
-		Chapter 02 - http://www.mediafire.com/file/gj4ejaka7a7bpwu/Prequel_02.zip
-			Mirror - https://workupload.com/file/ydazfK3rkL9
-		Chapter 03 - http://www.mediafire.com/file/zjmirympqlnct02/Prequel_03.zip
-			Mirror - https://workupload.com/file/JKAd6Ft5TUG
-		Chapter 04 - http://www.mediafire.com/file/h4mv9adc4m0y6h4/Prequel_04.zip
-			Mirror - https://workupload.com/file/9LdGDJvuq9M
-		Chapter 05 - http://www.mediafire.com/file/w9txbt6wawabbuc/Prequel%2005.zip
-			Mirror - https://workupload.com/file/XU4jq2T6S3T
-		Chapter 06 - http://www.mediafire.com/file/0jdrnhh7pq0533a/Prequel%2006.zip
-			Mirror - https://workupload.com/file/ewcqz2NhsX4
-		Chapter 07 - https://workupload.com/file/DMkwTssVckm
-		Chapter 08 - https://workupload.com/file/vQ3K6uVdBf4
-		[Batch] Chapter 00-08 - https://workupload.com/archive/32EQCzza
+		Chapter 00 - https://workupload.com/file/EnjvWmTYesR
+			Mirror - http://www.mediafire.com/file/bcbx6zux3f0cqu1/Prequel_00.zip
+		Chapter 01 - https://workupload.com/file/VwsqSCGMkqH
+			Mirror - http://www.mediafire.com/file/yh2n9x4pn70nj7i/Prequel_01.zip
+		Chapter 02 - https://workupload.com/file/mTKs9RmWb6X
+			Mirror - http://www.mediafire.com/file/gj4ejaka7a7bpwu/Prequel_02.zip
+		Chapter 03 - https://workupload.com/file/tScEfwJRLJu
+			Mirror - http://www.mediafire.com/file/zjmirympqlnct02/Prequel_03.zip
+		Chapter 04 - https://workupload.com/file/u7RvqHXxpz4
+			Mirror - http://www.mediafire.com/file/h4mv9adc4m0y6h4/Prequel_04.zip
+		Chapter 05 - https://workupload.com/file/DzdA5u9pEAW
+			Mirror - http://www.mediafire.com/file/w9txbt6wawabbuc/Prequel%2005.zip
+		Chapter 06 - https://workupload.com/file/MH8v7w676CS
+			Mirror - http://www.mediafire.com/file/0jdrnhh7pq0533a/Prequel%2006.zip
+		Chapter 07 - https://workupload.com/file/CxE8NxHmcsa
+		Chapter 08 - https://workupload.com/file/2nMFe8VEYuf
+		Chapter 09 - https://workupload.com/file/jLnQa7XCvC9
+		Chapter 10 - https://workupload.com/file/MaP5qZYfszg
+		Chapter 11 - https://workupload.com/file/xy4ysDTxy6w
+		Chapter 12 - https://workupload.com/file/LBpcTBGxrVF
+		Chapter 12.5 - https://workupload.com/file/pKkXupX7Vjj
 
+		Batch download - https://workupload.com/archive/sXwJfFec
+		Read online - https://mangadex.org/title/23185/brave-witches-prequel-the-vast-land-of-orussia
 
 ========================================
 --&gt; # Art Books #
@@ -522,8 +528,8 @@ Strike Witch generator
     
 SW imageboard
     http://helma.us/sw/ (;_;7)
-	http://helma.xyz/sw/
-	http://www.karlsland.net/sw/ (Chinese)
+    http://helma.xyz/sw/
+    http://www.karlsland.net/sw/ (Chinese)
     
 An open scanlation website working on a number of SW manga
     http://yuriproject.net/
@@ -534,7 +540,7 @@ An Anon worked on a SW game, named Star Witches
     
 An Anon made a SW sorter
     http://swsort.sne.jp/ (Dead link)
-	https://atlcou.github.io/sw_sort/
+    https://atlcou.github.io/sw_sort/
 
 A mish-mash of things I backed up for SW
     http://www.mediafire.com/folder/64apa337ceb1s

@@ -17,6 +17,7 @@
 
 <iframe id="old-shim-iframe" frameborder="0"></iframe>
 
+<script type="text/javascript" src="{$cwebpath}custom/js/backlinks.js"></script>
 </body>
 </html>
 

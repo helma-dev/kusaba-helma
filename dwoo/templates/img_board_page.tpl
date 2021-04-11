@@ -377,6 +377,7 @@
 		{/if}
 		{$post.message}
 		</blockquote>
+		<span class="replybacklinks" id="repback{$post.id}rd"></span>
 		{if not $post.stickied && $post.parentid eq 0 && (($board.maxage > 0 && ($post.timestamp + ($board.maxage * 3600)) < (time() + 7200 ) ) || ($post.deleted_timestamp > 0 && $post.deleted_timestamp <= (time() + 7200)))}
 			<span class="oldpost">
 				{t}Marked for deletion (old){/t}
@@ -423,6 +424,5 @@
 	{/foreach}
 			</div>
 			</div>
-		<br clear="left" />
 		<hr />
 {/foreach}

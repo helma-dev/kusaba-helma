@@ -27,7 +27,7 @@
 	set_delpass("delform");
 //--></script>
 {if $replythread eq 0}
-	<table border="1">
+	<table border="1" class="pageselect">
 	<tbody>
 		<tr>
 			<td>

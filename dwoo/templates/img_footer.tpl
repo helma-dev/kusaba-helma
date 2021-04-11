@@ -71,7 +71,7 @@
 	//--></script>
 {/if}
 {if $replythread eq 0}
-	<table border="1">
+	<table border="1" class="pageselect">
 	<tbody>
 		<tr>
 			<td>
@@ -106,6 +106,9 @@
 					<form method="get" action="{%KU_BOARDSPATH}/{$board.name}/{$thispage+1}.html"><input value="{t}Next{/t}" type="submit" /></form>
 				{/if}
 	
+			</td>
+			<td>
+				[<a href="/{$board.name}/catalog.html">Catalog</a>]
 			</td>
 		</tr>
 	</tbody>
