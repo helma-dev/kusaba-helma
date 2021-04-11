@@ -70,7 +70,7 @@ if (!$cache_loaded) {
 	// Imageboard info
 		$cf['KU_NAME']      = 'helma.xyz'; // The name of your site
 		$cf['KU_SLOGAN']    = ''; // Site slogan, set to nothing to disable its display
-		$cf['KU_HEADERURL'] = ''; // Full URL to the header image (or rotation script) to be displayed, can be left blank for no image
+		$cf['KU_HEADERURL'] = 'https://www.helma.xyz/css/banner/rotate.php'; // Full URL to the header image (or rotation script) to be displayed, can be left blank for no image
 		$cf['KU_IRC']       = ''; // IRC info, which will be displayed in the menu.  Leave blank to remove it
 		$cf['KU_BANREASON']	= ''; // This is the default ban reason that will automatically fill in the ban reason box
 
@@ -78,8 +78,8 @@ if (!$cache_loaded) {
 		// Main installation directory
 			$cf['KU_ROOTDIR']   = realpath(dirname(__FILE__))."/"; // Full system path of the folder containing kusaba.php, with trailing slash. The default value set here should be OK.. If you need to change it, you should already know what the full path is anyway.
 			$cf['KU_WEBFOLDER'] = '/'; // The path from the domain of the board to the folder which kusaba is in, including the trailing slash.  Example: "http://www.yoursite.com/misc/kusaba/" would have a $cf['KU_WEBFOLDER'] of "/misc/kusaba/"
-			$cf['KU_WEBPATH']   = 'http://kusaba.localhost'; // The path to the index folder of kusaba, without trailing slash. Example: http://www.yoursite.com
-			$cf['KU_DOMAIN']    = 'kusaba.localhost'; // Used in cookies for the domain parameter.  Should be a period and then the top level domain, which will allow the cookies to be set for all subdomains.  For http://www.randomchan.org, the domain would be .randomchan.org; http://zachchan.freehost.com would be zach.freehost.com
+			$cf['KU_WEBPATH']   = 'https://www.helma.xyz'; // The path to the index folder of kusaba, without trailing slash. Example: http://www.yoursite.com
+			$cf['KU_DOMAIN']    = '.helma.xyz'; // Used in cookies for the domain parameter.  Should be a period and then the top level domain, which will allow the cookies to be set for all subdomains.  For http://www.randomchan.org, the domain would be .randomchan.org; http://zachchan.freehost.com would be zach.freehost.com
 
 		// Board subdomain/alternate directory (optional, change to enable)
 			// DO NOT CHANGE THESE IF YOU DO NOT KNOW WHAT YOU ARE DOING!!
@@ -102,10 +102,10 @@ if (!$cache_loaded) {
 		$cf['KU_CACHEDTEMPLATEDIR'] = $cf['KU_ROOTDIR'] . 'dwoo/templates_c'; // Dwoo compiled templates directory.  This folder MUST be writable (you may need to chmod it to 755).  Set to '' to disable template caching
 
 	// CSS styles
-		$cf['KU_STYLES']        = 'burichan:karlsland:futaba:halloween:fuhrerchan:gurochan:harrischan:kusaba:photon'; // Styles which are available to be used for the boards, separated by colons, in lower case.  These will be displayed next to [Home] [Manage] if KU_STYLESWIKUHER is set to true
+		$cf['KU_STYLES']        = 'burichan:neohelma:karlsland:futaba:halloween:fuhrerchan:gurochan:harrischan:kusaba:photon'; // Styles which are available to be used for the boards, separated by colons, in lower case.  These will be displayed next to [Home] [Manage] if KU_STYLESWIKUHER is set to true
 		$cf['KU_DEFAULTSTYLE']  = 'burichan'; // If Default is selected in the style list in board options, it will use this style.  Should be lower case
 		$cf['KU_STYLESWITCHER'] = true; // Whether or not to display the different styles in a clickable switcher at the top of the board
-		$cf['KU_DROPSWITCHER']	= false; // Whether or not to use a dropdown style switcher. False is use plaintext switcher, true is dropdown.
+		$cf['KU_DROPSWITCHER']	= true; // Whether or not to use a dropdown style switcher. False is use plaintext switcher, true is dropdown.
 
 		$cf['KU_TXTSTYLES']        = 'futatxt:buritxt'; // Styles which are available to be used for the boards, separated by colons, in lower case
 		$cf['KU_DEFAULTTXTSTYLE']  = 'futatxt'; // If Default is selected in the style list in board options, it will use this style.  Should be lower case
