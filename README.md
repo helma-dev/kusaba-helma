@@ -24,9 +24,10 @@ GNU General Public License v2 (GPL-2)
 Special thanks
 ---
 
-- Source  code from [original repo](https://github.com/altbdoor/kusaba-helma/) by [altbdoor](https://github.com/altbdoor)
+- Source code from [original repo](https://github.com/altbdoor/kusaba-helma/) by [altbdoor](https://github.com/altbdoor)
 - A bunch of improvements taken from [kusabax-55ch](https://github.com/fourfivesix/kusabax-55ch/) by [fourfivesix](https://github.com/fourfivesix)
-
+- [Klaus Hartl, Fagner Brack and others](https://github.com/js-cookie/js-cookie) for JS Cookie API.
+- [Walter Zorn](http://www.walterzorn.de/en/tooltip/tooltip_e.htm) for his wonderful tooltip library.
 
 Kusaba X README
 ---
