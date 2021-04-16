@@ -195,3 +195,13 @@ a:hover {
 .reflinkpreview {
 	background-color: #D6DAF0 !important;
 }
+.replybacklinks:not(:empty)::before {
+    content: "\a Replies:"!important;
+    white-space: pre; 
+}  
+.reflinkpreview {
+    margin-left: -1.5em
+}
+.reflinkpreview .doubledash{
+    display:none;
+}

@@ -170,3 +170,13 @@ table td {
 	color:#333333;
 	border: 2px dashed #EE6600;
 }
+.replybacklinks:not(:empty)::before {
+    content: "\a Replies:"!important;
+    white-space: pre; 
+}  
+.reflinkpreview {
+    margin-left: -1.5em
+}
+.reflinkpreview .doubledash{
+    display:none;
+}

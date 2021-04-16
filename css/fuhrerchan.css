@@ -133,3 +133,23 @@ hr {
 .reflinkpreview {
 	background-color: #DCDDDC !important;
 }
+.replybacklinks:not(:empty)::before {
+    content: "\a Replies:";
+    white-space: pre; 
+}  
+.reflinkpreview {
+    margin-left: -1.5em
+}
+.reflinkpreview .doubledash{
+    display:none;
+}
+.replybacklinks:not(:empty)::before {
+    content: "\a Replies:"!important;
+    white-space: pre; 
+}  
+.reflinkpreview {
+    margin-left: -1.5em
+}
+.reflinkpreview .doubledash{
+    display:none;
+}

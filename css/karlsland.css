@@ -206,3 +206,12 @@ table {
 .reflinkpreview {
 	background-color: #5baaf7 !important;
 }
+.replybacklinks:not(:empty)::before {
+    content: "Replies:"!important;
+}  
+.reflinkpreview {
+    margin-left: -1.5em
+}
+.reflinkpreview .doubledash{
+    display:none;
+}
