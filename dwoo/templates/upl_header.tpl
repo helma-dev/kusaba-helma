@@ -13,8 +13,8 @@
 	</style>
 	{/literal}
 {/if}
-{if %KU_RSS neq ''}
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="{%KU_BOARDSPATH}/{$board.name}/rss.xml" />
+{if %KU_RSS}
+	<link rel="alternate" type="application/rss+xml" title="{%KU_NAME} - {$board.name}" href="{%KU_BOARDSPATH}/{$board.name}/rss.xml" />
 {/if}
 <script type="text/javascript"><!--
 		var ku_boardspath = '{%KU_BOARDSPATH}';
@@ -74,6 +74,9 @@
 {if %KU_WATCHTHREADS}
 	[<a href="#" onclick="javascript:showwatchedthreads();return false" onmouseover="Tip('{t}Toggle Watched Threads{/t}')" onmouseout="UnTip()">{t}WT{/t}</a>]&nbsp;
 {/if}
+{if %KU_RSS}
+	[<a href="{%KU_BOARDSPATH}/{$board.name}/rss.xml" type="application/rss+xml" onmouseover="Tip('{t}Subscribe to /{$board.name}/{/t}')" onmouseout="UnTip()">{t}RSS{/t}</a>]&nbsp;
+{/if}
 [<a href="{%KU_WEBPATH}" target="_top">{t}Home{/t}</a>]&nbsp;[<a href="{%KU_CGIPATH}/manage.php" target="_top">{t}Manage{/t}</a>]
 </div>
 <div class="navbar">
@@ -81,7 +84,7 @@
 	{foreach name=sections item=sect from=$boardlist}
 		[
 		{foreach name=brds item=brd from=$sect}
-			<a title="{$brd.desc}" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
+			<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
 		{/foreach}
 		 ]
 	{/foreach}
@@ -94,7 +97,7 @@
 {if %KU_WATCHTHREADS && not $isoekaki && not $hidewatchedthreads}
 				<script type="text/javascript"><!--
 				if (getCookie('showwatchedthreads') == '1') {
-				document.write('<div id="watchedthreads" style="top: {$ad_top}px; left: 25px;" class="watchedthreads"><div class="postblock" id="watchedthreadsdraghandle" style="width: 100%;">{t}Watched Threads{/t}<\/div><span id="watchedthreadlist"><\/span><div id="watchedthreadsbuttons"><a href="#" onclick="javascript:hidewatchedthreads();return false;" title="{t}Hide the watched threads box{/t}"><img src="{$cwebpath}css/icons/blank.gif" border="0" class="hidewatchedthreads" alt="hide" /><\/a>&nbsp;<a href="#" onclick="javascript:getwatchedthreads(\'0\', \'{$board.name}\');return false;" title="{t}Refresh watched threads{/t}"><img src="{$cwebpath}css/icons/blank.gif" border="0" class="refreshwatchedthreads" alt="refresh" /><\/a><\/div><\/div>');
+				document.write('<div id="watchedthreads" style="top: {$ad_top}px; left: 25px;" class="watchedthreads"><div class="postblock" id="watchedthreadsdraghandle" style="width: 100%;">{t}Watched Threads{/t}<\/div><span id="watchedthreadlist"><\/span><div id="watchedthreadsbuttons"><a href="#" onclick="javascript:hidewatchedthreads();return false;" onmouseover="javascript:Tip(\'{t}Hide the watched threads box{/t}\')" onmouseout="javascript:UnTip()"><img src="{$cwebpath}css/icons/blank.gif" border="0" class="hidewatchedthreads" alt="hide" /><\/a>&nbsp;<a href="#" onclick="javascript:getwatchedthreads(\'0\', \'{$board.name}\');return false;" onmouseover="javascript:Tip(\'{t}Refresh watched threads{/t}\')" onmouseout="javascript:UnTip()"><img src="{$cwebpath}css/icons/blank.gif" border="0" class="refreshwatchedthreads" alt="refresh" /><\/a><\/div><\/div>');
 				watchedthreadselement = document.getElementById('watchedthreads');
 				watchedthreadselement.style.top = getCookie('watchedthreadstop');
 				watchedthreadselement.style.left = getCookie('watchedthreadsleft');

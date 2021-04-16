@@ -35,7 +35,7 @@
 		<td class="postblock">
 			{t}Email{/t}</td>
 		<td>
-			<input type="text" name="em" size="28" maxlength="75" accesskey="e" /> <input type="button" class="sub_btn" value="{t}↓{/t}" onclick="document.postform.em.value='sage'" onmouseover="Tip('{t}Instant Sage{/t}')" onmouseout="UnTip()">
+			<input type="text" name="em" size="28" maxlength="75" accesskey="e" /> <input type="button" class="sub_btn" value="{t}▼{/t}" onclick="document.postform.em.value='sage'" onmouseover="Tip('{t}Do not bump{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@
 	{if $board.uploadtype eq 0 || $board.uploadtype eq 1}
 		<tr>
 			<td class="postblock">
-				<span style="border-bottom: 1px dotted" onmouseover="Tip('{t}GIF, JPG, PNG, WebM. Maximum 8000 KB.{/t}')" onmouseout="UnTip()">{t}File{/t}</span>
+				<span style="border-bottom: 1px dotted" onmouseover="Tip('{if $board.filetypes_allowed neq ''}{foreach name=files item=filetype from=$board.filetypes_allowed}{$filetype.0|upper}{if $.foreach.files.last}{else}, {/if}{/foreach}{else}{t}None{/t}{/if}{t}. Maximum{/t} {math "round(x/1024)" x=$board.maximagesize}{t} KB.{/t}')" onmouseout="UnTip()">{t}File{/t}</span>
 			</td>
 			<td>
 			<input type="file" name="imagefile" size="35" accesskey="f" />

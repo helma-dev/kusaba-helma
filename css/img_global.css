@@ -158,7 +158,17 @@ form .trap {
 	background-color: #F0E0D6;
 	border: 1px dotted #000000;
 }
-.sub_btn{text-decoration: underline; text-decoration-style: dotted;}
+.sub_btn{font-family: monospace!important;
+  background: #133b5e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size:13px!important;
+}
 .replybacklinks:not(:empty)::before{content: "Replies:";}
 .replybacklinks {font-size: 75%;font-style: italic;}
 .replybacklinks .reflinkpreview{font-size: 133%; font-style:initial;}

@@ -5,7 +5,7 @@
 		{if $post.parentid eq 0}
 			<span id="unhidethread{$post.id}{$board.name}" style="display: none;">
 			{t}Thread{/t} <a href="{%KU_BOARDSFOLDER}{$board.name}/res/{$post.id}.html">{$post.id}</a> {t}hidden.{/t}
-			<a href="#" onclick="javascript:togglethread('{$post.id}{$board.name}');return false;" title="{t}Un-Hide Thread{/t}">
+			<a href="#" onclick="javascript:togglethread('{$post.id}{$board.name}');return false;" onmouseover="Tip('{t}Un-Hide Thread{/t}')" onmouseout="UnTip()">
 				<img src="{$cwebpath}css/icons/blank.gif" border="0" class="unhidethread" alt="{t}Un-Hide Thread{/t}" />
 			</a>
 	</span>
@@ -164,20 +164,20 @@
 			{/if}
 			<span class="extrabtns">
 			{if $post.locked eq 1}
-				<img style="border: 0;" src="{$boardpath}css/locked.gif" alt="{t}Locked{/t}" />
+				<img style="border: 0;" src="{$boardpath}css/locked.gif" onmouseover="Tip('{t}Locked{/t}')" onmouseout="UnTip()" />
 			{/if}
 			{if $post.stickied eq 1}
-				<img style="border: 0;" src="{$boardpath}css/sticky.gif" alt="{t}Stickied{/t}" />
+				<img style="border: 0;" src="{$boardpath}css/sticky.gif" onmouseover="Tip('{t}Stickied{/t}')" onmouseout="UnTip()" />
 			{/if}
-			<span id="hide{$post.id}"><a href="#" onclick="javascript:togglethread('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}{$board.name}');return false;" title="Hide Thread"><img src="{$boardpath}css/icons/blank.gif" border="0" class="hidethread" alt="hide" /></a></span>
+			<span id="hide{$post.id}"><a href="#" onclick="javascript:togglethread('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}{$board.name}');return false;" onmouseover="Tip('{t}Hide Thread{/t}')" onmouseout="UnTip()"><img src="{$boardpath}css/icons/blank.gif" border="0" class="hidethread" alt="hide" /></a></span>
 			{if %KU_WATCHTHREADS}
-				<a href="#" onclick="javascript:addtowatchedthreads('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}','{$board.name}');return false;" title="Watch Thread"><img src="{$boardpath}css/icons/blank.gif" border="0" class="watchthread" alt="watch" /></a>
+				<a href="#" onclick="javascript:addtowatchedthreads('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}','{$board.name}');return false;" onmouseover="Tip('{t}Watch Thread{/t}')" onmouseout="UnTip()"><img src="{$boardpath}css/icons/blank.gif" border="0" class="watchthread" alt="watch" /></a>
 			{/if}
-			{if %KU_EXPAND && $post.replies && ($post.replies + %KU_REPLIES) < 300}
-				<a href="#" onclick="javascript:expandthread('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}','{$board.name}');return false;" title="Expand Thread"><img src="{$boardpath}css/icons/blank.gif" border="0" class="expandthread" alt="expand" /></a>
+			{if %KU_EXPAND && $post.replies && ($post.replies + %KU_REPLIES) < 500}
+				<a href="#" onclick="javascript:expandthread('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}','{$board.name}');return false;" onmouseover="Tip('{t}Expand Thread{/t}')" onmouseout="UnTip()"><img src="{$boardpath}css/icons/blank.gif" border="0" class="expandthread" alt="expand" /></a>
 			{/if}
 			{if %KU_QUICKREPLY}
-				<a href="#postbox" onclick="javascript:quickreply('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}');" title="{t}Quick Reply{/t}"><img src="{$boardpath}css/icons/blank.gif" border="0" class="quickreply" alt="quickreply" /></a>
+				<a href="#postbox" onclick="javascript:quickreply('{if $post.parentid eq 0}{$post.id}{else}{$post.parentid}{/if}');" onmouseover="Tip('{t}Quick Reply{/t}')" onmouseout="UnTip()"><img src="{$boardpath}css/icons/blank.gif" border="0" class="quickreply" alt="quickreply" /></a>
 			{/if}
 			</span>
 			<span id="dnb-{$board.name}-{$post.id}-y"></span>

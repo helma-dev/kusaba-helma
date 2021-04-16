@@ -121,7 +121,7 @@
 		{foreach name=sections item=sect from=$boardlist}
 			[
 			{foreach name=brds item=brd from=$sect}
-				<a title="{$brd.desc}" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
+				<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
 			{/foreach}
 			]
 		{/foreach}
