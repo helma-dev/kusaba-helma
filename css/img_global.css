@@ -172,3 +172,14 @@ form .trap {
 .replybacklinks:not(:empty)::before{content: "Replies:";}
 .replybacklinks {font-size: 75%;font-style: italic;}
 .replybacklinks .reflinkpreview{font-size: 133%; font-style:initial;}
+
+/* Mobile */
+@media only screen and (max-width:480px) {
+  .doubledash{display:none} 
+  .reply{clear:both!important;}
+  table {clear: both; width:100%;}
+  .adminbar, .navbar, .pageselect, .userdelete{clear:both;float: left !important;margin-bottom:4px;width: initial;}
+  textarea{width:98%!important}
+  .thumb{max-width:100px; height:auto}
+  blockquote{text-align: justify}
+}
