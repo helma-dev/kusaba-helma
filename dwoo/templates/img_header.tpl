@@ -87,16 +87,6 @@
 	var hiddenthreads = getCookie('hiddenthreads').split('!');
 //--></script>
 
-<script type="text/javascript"><!--
-	function togglebacklinks(){
-		if (getCookie('backlinks') == '0'){
-			set_cookie("backlinks","1",30),window.location.reload(!0);
-		} else { 
-			set_cookie("backlinks","0",30),window.location.reload(!0);
-		}
-	}
-//--></script>
-
 {if $board.enablecaptcha eq 1}
 	{literal}
 		<script type="text/javascript"> var RecaptchaOptions = { theme : 'clean' }; </script>
@@ -108,7 +98,7 @@
 <script type="text/javascript" src="{$cwebpath}custom/js/bb.js"></script>
 
 
-
+<nav class="topbar">
 <div class="adminbar">
 {if %KU_STYLESWITCHER}
 	{if %KU_DROPSWITCHER}
@@ -128,17 +118,18 @@
 	{/if}
 {/if}
 
-[<a href="#" onclick="javascript:togglebacklinks();return false" onmouseover="Tip('{t}Toggle Backlinks{/t}')" onmouseout="UnTip()">{t}BL{/t}</a>]&nbsp;
-
 {if %KU_WATCHTHREADS}
 	[<a href="#" onclick="javascript:showwatchedthreads();return false" onmouseover="Tip('{t}Toggle Watched Threads{/t}')" onmouseout="UnTip()">{t}WT{/t}</a>]&nbsp;
 {/if}
 {if %KU_RSS}
 	[<a href="{%KU_BOARDSPATH}/{$board.name}/rss.xml" type="application/rss+xml" onmouseover="Tip('{t}Subscribe to /{$board.name}/{/t}')" onmouseout="UnTip()">{t}RSS{/t}</a>]&nbsp;
 {/if}
+
+[<a href="{%KU_WEBPATH}/custom/settings.html">{t}Settings{/t}</a>]&nbsp;
+
 [<a href="{%KU_WEBPATH}" target="_top">{t}Home{/t}</a>]&nbsp;[<a href="{%KU_CGIPATH}/manage.php" target="_top">{t}Manage{/t}</a>]
 </div>
-<div class="navbar">
+<div class="navbar navtop">
 {if %KU_GENERATEBOARDLIST}
 	{foreach name=sections item=sect from=$boardlist}
 		[
@@ -153,6 +144,7 @@
 	{/if}
 {/if}
 </div>
+</nav>
 {if %KU_WATCHTHREADS && not $isoekaki && not $hidewatchedthreads}
 				<script type="text/javascript"><!--
 				if (getCookie('showwatchedthreads') == '1') {

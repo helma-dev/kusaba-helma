@@ -3,13 +3,13 @@
 {foreach name=thread item=postsa from=$posts}
 	{foreach key=postkey item=post from=$postsa}
 		{if $post.parentid eq 0}
-			<span id="unhidethread{$post.id}{$board.name}" style="display: none;">
+			<span class="hiddenthread" id="unhidethread{$post.id}{$board.name}" style="display: none;">
 			{t}Thread{/t} <a href="{%KU_BOARDSFOLDER}{$board.name}/res/{$post.id}.html">{$post.id}</a> {t}hidden.{/t}
 			<a href="#" onclick="javascript:togglethread('{$post.id}{$board.name}');return false;" onmouseover="Tip('{t}Un-Hide Thread{/t}')" onmouseout="UnTip()">
 				<img src="{$cwebpath}css/icons/blank.gif" border="0" class="unhidethread" alt="{t}Un-Hide Thread{/t}" />
 			</a>
 	</span>
-	<div id="thread{$post.id}{$board.name}">
+	<div class="threadcontainer" id="thread{$post.id}{$board.name}">
 	<script type="text/javascript"><!--
 		if (hiddenthreads.toString().indexOf('{$post.id}{$board.name}')!==-1) {
 			document.getElementById('unhidethread{$post.id}{$board.name}').style.display = 'block';

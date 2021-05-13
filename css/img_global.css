@@ -158,6 +158,12 @@ form .trap {
 	background-color: #F0E0D6;
 	border: 1px dotted #000000;
 }
+.threadcontainer {
+	display:flow-root;
+}
+.replybacklinks:not(:empty)::before{content: "Replies:";}
+.replybacklinks {font-size: 75%;font-style: italic;}
+.replybacklinks .reflinkpreview{font-size: 133%; font-style:initial;}
 .sub_btn{font-family: monospace!important;
   background: #133b5e;
   color: white;
@@ -168,13 +174,25 @@ form .trap {
   border-radius: 2px;
   cursor: pointer;
   font-size:13px!important;
+  padding-left:0px;padding-right:0px;text-align:center;
+  vertical-align:text-bottom;
 }
-.replybacklinks:not(:empty)::before{content: "Replies:";}
-.replybacklinks {font-size: 75%;font-style: italic;}
-.replybacklinks .reflinkpreview{font-size: 133%; font-style:initial;}
+
+.navbuttons{
+bottom: 8px;
+right: 8px;
+position: fixed;
+z-index: 998;
+visibility: hidden;
+}
 
 /* Mobile */
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:640px) {
+html {
+  -moz-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%
+}
   .doubledash{display:none} 
   .reply{clear:both!important;}
   table {clear: both; width:100%;}

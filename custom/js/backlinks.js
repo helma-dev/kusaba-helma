@@ -1,3 +1,7 @@
+if (localStorage.getItem('backlinksEnabled') === null){
+    localStorage.setItem('backlinksEnabled', 'true');
+}
+
 function updateBackLinks() {
     var i;
     var links = document.getElementsByTagName('a');
@@ -35,6 +39,6 @@ var tr = links[i].href.substring(links[i].href.lastIndexOf('/')+1, links[i].href
     return 0;
 }
 
-if (getCookie('backlinks') !== '0'){     
+if (localStorage.getItem('backlinksEnabled') == 'true'){     
     updateBackLinks();
 }

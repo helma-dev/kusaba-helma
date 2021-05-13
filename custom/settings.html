@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Settings</title>
+<link rel="shortcut icon" href="https://www.helma.xyz/favicon.ico">
+<style>
+a{color: #34345C!important;}
+a:hover{color: #DD0000!important;}
+.category{color:#AF0A0F;}
+.l2{font-size: 14pt!important;}
+.catlist {list-style-image: none;list-style-position: outside;list-style-type: none;padding-left:0px;}
+hr{height:0; border-width:0; border-top:1px solid #b7c5d9!important}
+.catname{font-size: 13px;line-height: 15.6px;background-color:#d6daf0;padding: 5px 10px;font-weight:bold}
+</style>
+</head>
+<body style=";max-width:940px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; background-color:#EEF2FF; font-size:13px; color:black;margin:auto">
+<center>
+<img src="https://www.helma.xyz/css/banner/settings.jpg" alt="Logo" style="margin: 10px;outline: 1px solid #7d87bb;">
+<h1 style="color:rgb(175, 10, 15);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400">Settings</h1></center>
+<hr style="max-width:940px; margin: 0 auto">
+<div class="settingsmenu" style="margin: 0 auto; max-width: 940px;padding: 15px 10px;">
+	<div class="catname">Thread Updater</div>
+	<ul class="catlist">
+		<li class="catitem">
+			<label> <input id="updaterEnabled" type="checkbox" onclick="localStorage.setItem(this.id, this.checked);">
+			Enable auto-update 
+			</label>
+		</li>
+		<li class="catitem">
+			<label> <input id="updaterNotify" type="checkbox" onclick="localStorage.setItem(this.id, this.checked);">
+			Notify about new posts
+			</label>
+		</li>
+	</ul>
+	<div class="catname">Navigation</div>
+	<ul class="catlist">
+		<li class="catitem">
+			<label>  <input id="navBarFixed" type="checkbox" onclick="localStorage.setItem(this.id, this.checked);">
+			Fixed navigation bar 
+			</label>
+		</li>
+		<li class="catitem">
+			<label>  <input id="navButtons" type="checkbox" onclick="localStorage.setItem(this.id, this.checked);">
+			Top/bottom shortcuts 
+			</label>
+		</li>
+	</ul>
+	<div class="catname">Miscellaneous</div>
+	<ul class="catlist">
+		<li class="catitem">
+			<label>  <input id="backlinksEnabled" type="checkbox" onclick="localStorage.setItem(this.id, this.checked);">
+			Display backlinks 
+			</label>
+		</li>
+	</ul>
+</div>
+<br>
+<center><small>Settings are saved automatically.</small></center>
+
+<script type="text/javascript">
+var i, checkboxes = document.querySelectorAll('input[type=checkbox]');
+function load_() {
+    for (i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = localStorage.getItem(checkboxes[i].id) === 'true' ? true:false;
+    }
+} 
+load_();
+</script> 
+
+</body>
+</html>

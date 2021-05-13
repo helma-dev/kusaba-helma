@@ -1,4 +1,8 @@
 &#91;<a href="{%KU_WEBFOLDER}{$board.name}/">{t}Return{/t}</a>&#93;
+
+<script type="text/javascript" src="{$cwebpath}lib/javascript/jquery.min.js"></script> 
+<script type="text/javascript" src="{$cwebpath}custom/js/update.js"></script>
+
 {if %KU_FIRSTLAST && ( count($posts) > 50 || $replycount > 50)}
 	&#91;<a href="{%KU_WEBFOLDER}{$board.name}/res/{$posts.0.id}.html">{t}Entire Thread{/t}</a>&#93; 
 	&#91;<a href="{%KU_WEBFOLDER}{$board.name}/res/{$posts.0.id}+50.html">{t}Last 50 posts{/t}</a>&#93;

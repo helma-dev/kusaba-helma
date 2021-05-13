@@ -68,8 +68,9 @@
 	</table>
 {/if}
 <br />
+<nav class="navbuttons"><a class="sub_btn" href="#bottom" style="display: inline-block; color: white !important;">▼</a>  <a class="sub_btn" href="#top" style="display: inline-block; color: white !important;">▲</a></nav>
 {if $boardlist}
-	<div class="navbar">
+	<div class="navbar navbottom">
 	{if %KU_GENERATEBOARDLIST}
 		{foreach name=sections item=sect from=$boardlist}
 			[

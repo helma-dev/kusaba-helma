@@ -6,18 +6,18 @@ html, body {
 }
 a {
 	background:inherit;
-	color:#00e;
+	color:#00e!important;
 	text-decoration:none;
 	font-family:sans-serif;
 }
 a:visited {
 	background:inherit;
-	color:#00e;
+	color:#00e!important;
 	text-decoration:none;
 	font-family:sans-serif;
 }
 a:hover {
-	color:#DD0000;
+	color:#DD0000!important;
 	background:inherit;
 	font-family:sans-serif;
 }
@@ -163,7 +163,7 @@ a:hover {
 	font-family:sans-serif;
 }
 .reply blockquote {
-	margin-bottom:revert;
+	padding-bottom:16px!important;
 }
 .replyhl {
 	background: #D6BAD0;

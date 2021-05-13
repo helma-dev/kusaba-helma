@@ -28,10 +28,6 @@ html {
  color:var(--font-color);
  font-family:sans-serif
 }
-body{
-	padding-top:0px!important;
-}
-
 .reflink a,
 a {
  color:var(--link-color)!important;
@@ -41,10 +37,10 @@ a {
  font-weight:700
 }
 a:visited {
- color:var(--link-visited)!important;
+ color:var(--link-visited)
 }
 a:hover {
- color:var(--link-hover)!important;
+ color:var(--link-hover)
 }
 .filesize a,
 .filesize a:visited {
@@ -159,7 +155,8 @@ a:hover {
  max-width:100%;
  min-width:30em;
  border-radius: 4px;
- border:1px solid var(--reply-bg) 
+ border:1px solid var(--reply-bg)
+ /*border:1px solid var(--reply-borders);*/
 }
 .highlight,
 .replyhl {
@@ -203,12 +200,24 @@ hr {
  border-width:1px medium medium;
  border-style:dashed none none;
  border-color:var(--hr-color) !important
-} 
+}
+/*.adminbar,
+.highlight,
+.navbar,
+.pageselect,
+.reply,
+.userdelete,
+#watchedthreads,
+.postform {
+ box-shadow:0px 0px 2px var(--highlight-darker);
+}*/
+
 .logo {
  clear:both;
  text-align:center;
  background:inherit;
  color:var(--board-name);
+ margin-top:.2em;
  width:100%;
  font:bold 28px Tahoma,sans-serif;
 }
@@ -216,14 +225,14 @@ hr {
  margin:10px;
  border:1px solid var(--reply-borders)
 }
-.navbottom,
+.adminbar,
+.navbar,
 .pageselect,
 .userdelete {
  background:var(--reply-bg);
  font-family:sans-serif;
  padding:.3em .2em .3em .2em;
- /*border:1px solid var(--reply-borders);*/
- border:0;
+ border:1px solid var(--reply-borders);
  border-radius: 4px;
 }
 .copyrightdisclaimer {
@@ -232,28 +241,20 @@ hr {
 .replymode {
  display:none
 }
-.navbottom {
- padding:5px;
+.adminbar,
+.navbar {
+ padding:.5em;
  display:inline-block
-}
-.topbar{
-	background: var(--reply-bg);
-	line-height: 1.9em;
-	padding: 0px 5px;
-	border-radius: 0px 0px 4px 4px;
-	border: 1px solid var(--reply-borders);
-	border-top: 0px;
 }
 .postblock {
  color:var(--font-color);
  font-weight:700
 }
 #watchedthreads {
- background:var(--reply-bg)!important;
+ background:var(--reply-bg);
  font-family:sans-serif;
  padding:3px;
- /*border:1px solid var(--reply-borders)!important; */
- border:0!important;
+ border:1px solid var(--reply-borders)!important; 
  border-radius:4px
 }
 #watchedthreadsdraghandle {
@@ -265,14 +266,22 @@ hr {
 .postform {
  background-color:var(--reply-bg);
  padding:.2em;
- padding-bottom:0;  
+ padding-bottom:0; 
+ /*border:1px solid var(--reply-borders);*/
  border-radius: 4px;
 }
 .postform .postblock {
  padding:0 3px 0 3px;
  background:var(--highlight-darker)
 }
-
+.postform input,
+.postform textarea,
+.userdelete input,
+.userdelete textarea,
+select {
+ /* background:var(--board-bg); */ 
+ /* border:1px solid var(--hlreply-borders); */
+}
 .ruleset {
  display:none
 }
@@ -306,6 +315,6 @@ input[name=imagefile] {
   border: 1px solid var(--reply-borders)!important;
   background: var(--reply-bg)!important;
   padding: 0.375em;
-  border-radius: 4px; 
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;
+  border-radius: 4px;
+  /*box-shadow: 1px 1px 4px var(--highlight-darker);*/
 }
