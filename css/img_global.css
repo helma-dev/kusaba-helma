@@ -184,6 +184,11 @@ right: 8px;
 position: fixed;
 z-index: 998;
 visibility: hidden;
+display: none;
+}
+
+.navbuttons.sub_btn:hover{
+color:white!important;
 }
 
 /* Mobile */

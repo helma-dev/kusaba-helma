@@ -1,3 +1,7 @@
+:root {
+ --reply-bg: #5baaf7;
+ --reply-borders: #4888C5;
+}
 html, body {
 	font-size:12pt;
 	background:#99ccee;

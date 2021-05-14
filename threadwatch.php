@@ -142,7 +142,7 @@ if (isset($_GET['do'])) {
 					$output .= ' <strong>0</strong>';
 				}
 
-				$output .= ' <a href="#" onclick="javascript:removefromwatchedthreads(\'' . $watched_thread['threadid'] . '\', \'' . $_GET['board'] . '\');return false;" title="Un-watch">X</a><br />';
+				$output .= ' <a href="#" onclick="javascript:removefromwatchedthreads(\'' . $watched_thread['threadid'] . '\', \'' . $_GET['board'] . '\');return false;" onmouseover="Tip(\'Un-watch\')" onmouseout="UnTip()">X</a><br />';
 			}
 		} else {
 			$output .= 'None.<br />';

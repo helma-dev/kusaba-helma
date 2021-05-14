@@ -21,13 +21,13 @@
 
 <script type="text/javascript"><!--
 if (localStorage.getItem("navBarFixed") == "true") {
-    document.getElementsByClassName("topbar")[0].style = 'right: 8px;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;z-index: 999;position:fixed;';
+    document.getElementsByClassName("topbar")[0].style = 'right: 8px;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;z-index: 999;position:fixed;background:var(--reply-bg);border:1px solid var(--reply-borders);margin: 0 0 0 0;';
     document.getElementsByClassName("navtop")[0].style = 'text-align: right;line-height: 1em;padding-bottom: 5px;';
 }
 //--></script>
 <script type="text/javascript"><!--
 if (localStorage.getItem("navButtons") == "true") {
-    document.getElementsByClassName("navbuttons")[0].style = 'visibility: visible!important;';
+    document.getElementsByClassName("navbuttons")[0].style = 'visibility: visible!important;display:block!important;';
 }
 //--></script>
 </body>

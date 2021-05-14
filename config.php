@@ -102,7 +102,7 @@ if (!$cache_loaded) {
 		$cf['KU_CACHEDTEMPLATEDIR'] = $cf['KU_ROOTDIR'] . 'dwoo/templates_c'; // Dwoo compiled templates directory.  This folder MUST be writable (you may need to chmod it to 755).  Set to '' to disable template caching
 
 	// CSS styles
-		$cf['KU_STYLES']        = 'burichan:neohelma:karlsland:futaba:halloween:fuhrerchan:gurochan:harrischan:kusaba:photon'; // Styles which are available to be used for the boards, separated by colons, in lower case.  These will be displayed next to [Home] [Manage] if KU_STYLESWIKUHER is set to true
+		$cf['KU_STYLES']        = 'burichan:neohelma:nachthexe:karlsland:futaba:halloween:fuhrerchan:gurochan:harrischan:kusaba:photon'; // Styles which are available to be used for the boards, separated by colons, in lower case.  These will be displayed next to [Home] [Manage] if KU_STYLESWIKUHER is set to true
 		$cf['KU_DEFAULTSTYLE']  = 'burichan'; // If Default is selected in the style list in board options, it will use this style.  Should be lower case
 		$cf['KU_STYLESWITCHER'] = true; // Whether or not to display the different styles in a clickable switcher at the top of the board
 		$cf['KU_DROPSWITCHER']	= true; // Whether or not to use a dropdown style switcher. False is use plaintext switcher, true is dropdown.
