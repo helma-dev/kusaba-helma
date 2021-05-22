@@ -334,17 +334,7 @@
 
 		{/if}
 		{if $post.file_type eq 'mp3'}
-			<!--[if !IE]> -->
-			<object type="application/x-shockwave-flash" data="{%KU_WEBPATH}/inc/player/player.swf?playerID={$post.id}&amp;soundFile={$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3{if $post.id3.comments_html.artist.0 neq ''}&amp;artists={$post.id3.comments_html.artist.0}{/if}{if $post.id3.comments_html.title.0 neq ''}&amp;titles={$post.id3.comments_html.title.0|html_entity_decode|utf8_encode|urlencode}{/if}&amp;wmode=transparent" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,22,87" width="290" height="24">
-			<param name="wmode" value="transparent" />
-			<!-- <![endif]-->
-			<!--[if IE]>
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,22,87" width="290" height="24">
-				<param name="movie" value="{%KU_WEBPATH}/inc/player/player.swf?playerID={$post.id}&amp;soundFile={$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3{if $post.id3.comments_html.artist.0 neq ''}&amp;artists={$post.id3.comments_html.artist.0}{/if}{if $post.id3.comments_html.title.0 neq ''}&amp;titles={$post.id3.comments_html.title.0|html_entity_decode|utf8_encode|urlencode}{/if}&amp;wmode=transparent" />
-				<param name="wmode" value="transparent" />
-			<!-->
-			</object>
-			<!-- <![endif]-->
+			<audio controls><source src="{$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3" type="audio/mpeg">{t}You are seeing this because your browser does not support the HTML5 Audio element.{/t}</audio> 
 		{/if}
 		<blockquote>
 		{if $post.videobox}

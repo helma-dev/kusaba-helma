@@ -44,7 +44,7 @@ var config = new Object();
 
 
 //===================  GLOBAL TOOLTIP CONFIGURATION  =========================//
-var tt_Debug	= true		// false or true - recommended: false once you release your page to the public
+var tt_Debug	= false		// false or true - recommended: false once you release your page to the public
 var tt_Enabled	= true		// Allows to (temporarily) suppress tooltips, e.g. by providing the user with a button that sets this global variable to false
 var TagsToTip	= true		// false or true - if true, HTML elements to be converted to tooltips via TagToTip() are automatically hidden;
 							// if false, you should hide those HTML elements yourself
@@ -88,8 +88,8 @@ config. OffsetX			= 14		// Horizontal offset of left-top corner from mousepointe
 config. OffsetY			= 8			// Vertical offset
 config. Opacity			= 100		// Integer between 0 and 100 - opacity of tooltip in percent
 config. Padding			= 3			// Spacing between border and content
-config. Shadow			= true		// false or true
-config. ShadowColor		= '#C0C0C0'
+config. Shadow			= false		// false or true
+config. ShadowColor		= '#C0C0C050'
 config. ShadowWidth		= 2
 config. Sticky			= false		// false or true - fixate tip, ie. don't follow the mouse and don't hide on mouseout
 config. TextAlign		= 'left'	// 'left', 'right' or 'justify'

@@ -18,11 +18,20 @@
 <iframe id="old-shim-iframe" frameborder="0"></iframe>
 
 <script type="text/javascript" src="{$cwebpath}custom/js/backlinks.js"></script>
-
 <script type="text/javascript"><!--
 if (localStorage.getItem("navBarFixed") == "true") {
-    document.getElementsByClassName("topbar")[0].style = 'right: 8px;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;z-index: 999;position:fixed;background:var(--reply-bg);border:1px solid var(--reply-borders);margin: 0 0 0 0;';
+    var fixedNavBar = 'right: 8px;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;z-index: 999;position:fixed;background:var(--reply-bg);border:1px solid var(--reply-borders);margin: 0 0 0 0;';
     document.getElementsByClassName("navtop")[0].style = 'text-align: right;line-height: 1em;padding-bottom: 5px;';
+    if (getCookie('kustyle') === 'Neohelma' | getCookie('kustyle') === 'Nachthexe'){
+        document.getElementsByClassName("topbar")[0].style = fixedNavBar.concat('border-radius: 0 0 4px 4px;');
+    } else {
+        document.getElementsByClassName("topbar")[0].style = fixedNavBar;
+    }
+}
+if (getCookie('kustyle') === 'Harrischan' | getCookie('kustyle') === 'Nachthexe'){
+    config .BgColor = '#232323';
+    config .BorderColor = '#000000';
+    config .FontColor = '#DDDDDD';
 }
 //--></script>
 <script type="text/javascript"><!--
