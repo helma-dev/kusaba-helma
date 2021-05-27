@@ -312,10 +312,23 @@ input[name=imagefile] {
 
 
 /* Tomorrow - Extras */
-.postform input,.postform textarea,.userdelete input,.userdelete textarea,select{background:var(--board-bg);border:1px solid var(--hr-color);color:var(--font-color)}
-.sub_btn{background-color:#1d1f21!important;color:white!important;width:18px;height:18px;border:1px solid var(--hr-color)}
+button,.postform input,.postform textarea,.userdelete input,.userdelete textarea,select{background:var(--board-bg);border:1px solid var(--hr-color);color:var(--font-color)}
+.sub_btn{background-color:#1d1f21!important;color:white!important;width:18px!important;height:18px!important;border:1px solid var(--hr-color)}
 .navbuttons .sub_btn{width:16px!important;height:16px!important;}
-.hidewatchedthreads,.refreshwatchedthreads,.hidethread,.unhidethread,.watchthread,.quickreply,.expandthread{ border: 1px solid var(--hr-color);border-radius: 2px; background-image: url("./icons/night/icons.gif");}
+.hidewatchedthreads,.refreshwatchedthreads,.hidethread,.unhidethread,.watchthread,.quickreply,.expandthread{ border: 1px solid var(--hr-color);border-radius: 2px; background-image: url("./icons/night/icons.gif")!important;}
 .topbar{background:black;}
 .reflinkpreview{box-shadow: 0px 0px 3px #818181!important}
+
+button:disabled, input:disabled{opacity:0.4!important}
+
+
+.admin {
+    color: #c555c5!important;
+}
+.mod {
+    color: #FF1515!important;
+}
+.vip {
+    color: #6b0!important;
+}
 /* */

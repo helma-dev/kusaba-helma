@@ -17,7 +17,7 @@
 
 <iframe id="old-shim-iframe" frameborder="0"></iframe>
 
-<script type="text/javascript" src="{$cwebpath}custom/js/backlinks.js"></script>
+<!-- Update Navbar according to settings -->
 <script type="text/javascript"><!--
 if (localStorage.getItem("navBarFixed") == "true") {
     var fixedNavBar = 'right: 8px;box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;z-index: 999;position:fixed;background:var(--reply-bg);border:1px solid var(--reply-borders);margin: 0 0 0 0;';
@@ -37,6 +37,12 @@ if (getCookie('kustyle') === 'Harrischan' | getCookie('kustyle') === 'Nachthexe'
 <script type="text/javascript"><!--
 if (localStorage.getItem("navButtons") == "true") {
     document.getElementsByClassName("navbuttons")[0].style = 'visibility: visible!important;display:block!important;';
+}
+//--></script>
+<!-- Update Backlinks if enabled -->
+<script type="text/javascript"><!--
+if (localStorage.getItem('backlinksEnabled') == 'true'){     
+    updateBackLinks();
 }
 //--></script>
 </body>

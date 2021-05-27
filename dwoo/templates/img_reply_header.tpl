@@ -1,6 +1,6 @@
 &#91;<a href="{%KU_WEBFOLDER}{$board.name}/">{t}Return{/t}</a>&#93;
-
-<script type="text/javascript" src="{$cwebpath}lib/javascript/jquery.min.js"></script> 
+ 
+<!-- Auto-Update Script -->
 <script type="text/javascript" src="{$cwebpath}custom/js/update.js"></script>
 
 {if %KU_FIRSTLAST && ( count($posts) > 50 || $replycount > 50)}

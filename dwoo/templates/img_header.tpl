@@ -14,7 +14,7 @@
 				{foreach name=sections item=sect from=$boardlist}
 				
 				[ {foreach name=brds item=brd from=$sect}
-					<a title="{$brd.desc}" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
+					<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
 				{/foreach} ]
 				
 				{/foreach}
@@ -26,7 +26,7 @@
 		</div>
 		<div class="board-nav-misc-link float-right">
 			[<a href="{%KU_WEBPATH}/manage.php" target="_top">Manage</a>]
-			{*[<a href="javascript:void(0)" class="board-settings">Settings</a>]*}
+			[<a href="{%KU_WEBPATH}/custom/settings.html" class="board-settings">Settings</a>]
 			[<a href="{%KU_WEBPATH}" target="_top">Home</a>]
 		</div>
 	</div>
@@ -94,8 +94,13 @@
 {/if}
 </head>
 <body>
-<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script>
-<script type="text/javascript" src="{$cwebpath}custom/js/bb.js"></script>
+<!-- jQuery v3.3.1 -->
+<script type="text/javascript" src="{$cwebpath}lib/javascript/jquery.min.js"></script> 
+<!-- Extra Scripts-->
+<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script> 
+<script type="text/javascript" src="{$cwebpath}custom/js/extra.js"></script>
+
+
 
 
 <nav class="topbar">

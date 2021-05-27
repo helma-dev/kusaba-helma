@@ -37,6 +37,7 @@
 {/if}
 </head>
 <body>
+<nav class="topbar">
 <div class="adminbar">
 {if %KU_STYLESWITCHER}
 	{if %KU_DROPSWITCHER}
@@ -75,6 +76,7 @@
 	{/if}
 {/if}
 </div>
+</nav>
 {if %KU_WATCHTHREADS && not $isoekaki && not $hidewatchedthreads}
 				<script type="text/javascript"><!--
 				if (getCookie('showwatchedthreads') == '1') {

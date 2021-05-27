@@ -334,7 +334,7 @@
 
 		{/if}
 		{if $post.file_type eq 'mp3'}
-			<audio controls><source src="{$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3" type="audio/mpeg">{t}You are seeing this because your browser does not support the HTML5 Audio element.{/t}</audio> 
+			<audio controls preload="metadata"><source src="{$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3" type="audio/mpeg">{t}You are seeing this because your browser does not support the HTML5 Audio element.{/t}</audio>
 		{/if}
 		<blockquote>
 		{if $post.videobox}

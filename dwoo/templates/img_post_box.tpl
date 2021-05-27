@@ -7,6 +7,11 @@
 [<a href="https://archive.helma.xyz/" target="_blank">Index</a>] 
 <hr> 
 
+<!-- Load Tegaki for imageboards (todo: add setting to board options) -->
+<script type="text/javascript" src="{$cwebpath}lib/tegaki/tegaki.js"></script>
+<link rel="stylesheet" href="{$cwebpath}lib/tegaki/tegaki.css">
+<script type="text/javascript" src="{$cwebpath}lib/tegaki/oekaki.min.js"></script>
+
 <div class="postarea">
 <a id="postbox"></a>
 <form name="postform" id="postform" action="{%KU_CGIPATH}/board.php" method="post" enctype="multipart/form-data"
@@ -58,12 +63,13 @@
 			{t}Message{/t}
 		</td>
 		<td>
-			<textarea name="message" cols="48" rows="4" accesskey="m"></textarea><br />
+			<textarea name="message" id="postform_msg" cols="48" rows="4" accesskey="m"></textarea><br />
 			<input type="button" class="sub_btn" name="addbbcode0" value="{t}B{/t}" onclick="bbstyle(0)" onmouseover="Tip('{t}Bold{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode2" value="{t}I{/t}" onclick="bbstyle(2)" onmouseover="Tip('{t}Italic{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode4" value="{t}U{/t}" onclick="bbstyle(4)" onmouseover="Tip('{t}Underline{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode8" value="{t}S{/t}" onclick="bbstyle(8)" onmouseover="Tip('{t}Strikethrough{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode18" value="{t}H{/t}" onclick="bbstyle(18)" onmouseover="Tip('{t}Spoiler{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="expandpostform" value="{t}+{/t}" onclick="toggleTextareaSize('postform_msg', 48, 4, 75, 20);" onmouseover="Tip('{t}Expand/collapse text field{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	{if $board.enablecaptcha eq 1}
@@ -81,6 +87,16 @@
 			<input type="file" name="imagefile" size="35" accesskey="f" />
 			{if $replythread eq 0 && $board.enablenofile eq 1 }
 [<input type="checkbox" name="nofile" id="nofile" accesskey="q" /><label for="nofile"> {t}No File{/t}</label>] {/if} {if $board.name eq 'sw' || $board.name eq 'cr' || $board.name eq 'ot'} <input type="checkbox" name="spoiler" id="spoiler" /><label for="spoiler">{t}Spoiler{/t}</label> {/if} </td>
+			</td>
+		</tr>
+	{/if}
+	{if $board.uploadtype eq 0 || $board.uploadtype eq 1}
+		<tr>
+			<td class="postblock">
+				{t}Oekaki{/t}
+			</td>
+			<td class="painter-ctrl">
+				<label for="okwidth">Width:&nbsp;</label><input type="text" name="okwidth" id="okwidth" size="3" value="300">&nbsp;<label for="okheight">Height:&nbsp;</label><input type="text" name="okheight" id="okheight" size="3" value="300">&nbsp;<button type="button">Paint!</button>&nbsp;<button type="button" disabled="">Clear</button>
 			</td>
 		</tr>
 	{/if}
@@ -167,4 +183,9 @@
 </div>
 <script type="text/javascript"><!--
 				set_inputs("postform");
+				//--></script>
+
+<!-- Init Tegaki (todo: add setting to board options) -->
+<script type="text/javascript"><!--
+				PainterCore.init();
 				//--></script>

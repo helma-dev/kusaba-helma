@@ -32,11 +32,10 @@
 		</div>
 	</div>
 	
-	<div id="footer-timing" class="text-center text-small">
-		[<a href="http://kusabax.cultnet.net/" target="_top">kusaba x {%KU_VERSION}</a>]
-		{if $executiontime neq ''}
-			[Took {$executiontime}s]
-		{/if}
+	<div id="footer-timing" class="text-center text-small" style="margin-bottom: 0!important">
+		{if $executiontime neq ''} - {/if}
+		<a href="https://github.com/helma-dev/kusaba-helma" target="_top">kusaba-helma</a>
+	 	{if $executiontime neq ''} + {t}Took{/t} {$executiontime}s - {/if}
 	</div>
 
 {else}

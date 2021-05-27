@@ -29,7 +29,6 @@
 <meta http-equiv="expires" content="Sat, 17 Mar 1990 00:00:01 GMT" />
 <meta http-equiv="Content-Type" content="text/html;charset={%KU_CHARSET}" />
 <script type="text/javascript" src="{$cwebpath}lib/javascript/gettext.js"></script> 
-
 <script type="text/javascript" src="{$cwebpath}lib/javascript/js.cookies.js"></script>
 
 <!-- old shim -->

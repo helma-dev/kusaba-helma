@@ -38,8 +38,11 @@
 {/if}
 </head>
 <body>
-<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script>
-<script type="text/javascript" src="{$cwebpath}custom/js/bb.js"></script>
+<!-- jQuery v3.3.1 -->
+<script type="text/javascript" src="{$cwebpath}lib/javascript/jquery.min.js"></script> 
+<!-- Extra Scripts-->
+<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script> 
+<script type="text/javascript" src="{$cwebpath}custom/js/extra.js"></script>
 <nav class="topbar">
 <div class="adminbar">
 {if %KU_STYLESWITCHER}

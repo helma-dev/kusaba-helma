@@ -62,6 +62,7 @@
 			<input type="button" class="sub_btn" name="addbbcode4" value="{t}U{/t}" onclick="bbstyle(4)" onmouseover="Tip('{t}Underline{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode8" value="{t}S{/t}" onclick="bbstyle(8)" onmouseover="Tip('{t}Strikethrough{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode18" value="{t}H{/t}" onclick="bbstyle(18)" onmouseover="Tip('{t}Spoiler{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="expandpostform" value="{t}+{/t}" onclick="toggleTextareaSize('postform_msg', 48, 4, 75, 20);" onmouseover="Tip('{t}Expand/collapse text field{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	{if $board.enablecaptcha eq 1}

@@ -159,7 +159,7 @@ form .trap {
 	border: 1px dotted #000000;
 }
 .threadcontainer {
-	display:flow-root;
+	display:inline-block;
 }
 .replybacklinks:not(:empty)::before{content: "Replies:";}
 .replybacklinks {font-size: 75%;font-style: italic;}

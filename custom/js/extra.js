@@ -1,8 +1,41 @@
+/** 
+* Function: toggleTextareaSize. 
+* Toggles the text field size. Thanks, DesuChan! 
+*/
+jQuery.noConflict();
+function toggleTextareaSize(textareaId, cols1, rows1, cols2, rows2)
+   {
+      var textarea = $(textareaId);
+      if ((textarea.rows == rows1) && (textarea.cols == cols1))
+      {
+         textarea.setAttribute("style",
+            "width:" + parseInt(window.innerWidth * 0.8) + "px");
+         Event.observe(window, 'resize',
+            function(e)
+            {
+               textarea.setAttribute("style",
+                  "width:" + parseInt(window.innerWidth * 0.8) + "px");
+            });
+         textarea.cols = cols2;
+         textarea.rows = rows2;
+      }
+      else
+      {
+         textarea.removeAttribute("style");
+         textarea.cols = cols1;
+         textarea.rows = rows1;
+         Event.stopObserving(window, 'resize');
+      }
+   }
+/** 
+* End toggleTextareasize
+*/ 
+ 
+
 /**
 * bbCode control by subBlue design [ www.subBlue.com ]
 * Includes unixsafe colour palette selector by SHS`
 */
-
 // Startup variables
 var imageTag = false;
 var theSelection = false;
@@ -21,16 +54,6 @@ var is_win = ((clientPC.indexOf('win') != -1) || (clientPC.indexOf('16bit') != -
 var baseHeight;
 var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[s]','[/s]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[spoiler]','[/spoiler]');
 var bbcode = new Array();
-//esto de aqui hay que modificarlo despues
-//document.onload = initInsertions();
-
-/**
-* Shows the help messages in the helpline window
-*/
-function helpline(help)
-{
-	document.forms[form_name].helpbox.value = help_line[help];
-}
 
 /**
 * Fix a bug involving the TextRange object. From
@@ -189,79 +212,6 @@ function insert_text(text, spaces, popup)
 	}
 }
 
-/**
-* Add inline attachment at position
-*/
-function attach_inline(index, filename)
-{
-	insert_text('[attachment=' + index + ']' + filename + '[/attachment]');
-	document.forms[form_name].elements[text_name].focus();
-}
-
-/**
-* Add quote text to message
-*/
-function addquote(post_id, username)
-{
-	var message_name = 'message_' + post_id;
-	var theSelection = '';
-	var divarea = false;
-
-	if (document.all)
-	{
-		divarea = document.all[message_name];
-	}
-	else
-	{
-		divarea = document.getElementById(message_name);
-	}
-
-	// Get text selection - not only the post content :(
-	if (window.getSelection)
-	{
-		theSelection = window.getSelection().toString();
-	}
-	else if (document.getSelection)
-	{
-		theSelection = document.getSelection();
-	}
-	else if (document.selection)
-	{
-		theSelection = document.selection.createRange().text;
-	}
-
-	if (theSelection == '' || typeof theSelection == 'undefined' || theSelection == null)
-	{
-		if (divarea.innerHTML)
-		{
-			theSelection = divarea.innerHTML.replace(/<br>/ig, '\n');
-			theSelection = theSelection.replace(/<br\/>/ig, '\n');
-			theSelection = theSelection.replace(/&lt\;/ig, '<');
-			theSelection = theSelection.replace(/&gt\;/ig, '>');
-			theSelection = theSelection.replace(/&amp\;/ig, '&');
-			theSelection = theSelection.replace(/&nbsp\;/ig, ' ');
-		}
-		else if (document.all)
-		{
-			theSelection = divarea.innerText;
-		}
-		else if (divarea.textContent)
-		{
-			theSelection = divarea.textContent;
-		}
-		else if (divarea.firstChild.nodeValue)
-		{
-			theSelection = divarea.firstChild.nodeValue;
-		}
-	}
-
-	if (theSelection)
-	{
-		insert_text('[quote="' + username + '"]' + theSelection + '[/quote]');
-	}
-
-	return;
-}
 
 /**
 * From http://www.massless.org/mozedit/
@@ -302,60 +252,6 @@ function storeCaret(textEl)
 		textEl.caretPos = document.selection.createRange().duplicate();
 	}
 }
-
-/**
-* Color pallette
-*/
-function colorPalette(dir, width, height)
-{
-	var r = 0, g = 0, b = 0;
-	var numberList = new Array(6);
-	var color = '';
-
-	numberList[0] = '00';
-	numberList[1] = '40';
-	numberList[2] = '80';
-	numberList[3] = 'BF';
-	numberList[4] = 'FF';
-
-	document.writeln('<table cellspacing="1" cellpadding="0" border="0">');
-
-	for (r = 0; r < 5; r++)
-	{
-		if (dir == 'h')
-		{
-			document.writeln('<tr>');
-		}
-
-		for (g = 0; g < 5; g++)
-		{
-			if (dir == 'v')
-			{
-				document.writeln('<tr>');
-			}
-			
-			for (b = 0; b < 5; b++)
-			{
-				color = String(numberList[r]) + String(numberList[g]) + String(numberList[b]);
-				document.write('<td bgcolor="#' + color + '" style="width: ' + width + 'px; height: ' + height + 'px;">');
-				document.write('<a href="#" onclick="bbfontstyle(\'[color=#' + color + ']\', \'[/color]\'); return false;"><img src="images/spacer.gif" width="' + width + '" height="' + height + '" alt="#' + color + '" title="#' + color + '" /></a>');
-				document.writeln('</td>');
-			}
-
-			if (dir == 'v')
-			{
-				document.writeln('</tr>');
-			}
-		}
-
-		if (dir == 'h')
-		{
-			document.writeln('</tr>');
-		}
-	}
-	document.writeln('</table>');
-}
-
 
 /**
 * Caret Position object
@@ -407,3 +303,57 @@ function getCaretPosition(txtarea)
 
 	return caretPos;
 }
+/**
+* end bbCode control 
+*/
+
+
+
+/**
+* Backlinks.js
+*/
+// Enable by default
+if (localStorage.getItem('backlinksEnabled') === null){
+    localStorage.setItem('backlinksEnabled', 'true');
+}
+
+// updateBacklinks function
+function updateBackLinks() {
+    var i;
+    var links = document.getElementsByTagName('a');
+    var linkslen = links.length;
+            for (i=0;i<linkslen;i++){
+                    var linksclass = links[i].getAttribute('class');
+                    var testref = links[i].parentNode.getAttribute('class');
+                    if (linksclass != null && linksclass.indexOf('ref|') != -1 && (testref == undefined || testref != 'replybacklinks')) {
+                            var onde = links[i].href.substr(links[i].href.indexOf('#') + 1);
+                            var quem = links[i].parentNode.parentNode.parentNode.getElementsByTagName('a')[0].name;
+                            var br = links[i].href.substring(0, links[i].href.indexOf('/res'));
+br = br.substring(br.lastIndexOf('/')+1);
+ 
+var tr = links[i].href.substring(links[i].href.lastIndexOf('/')+1, links[i].href.lastIndexOf('.'));
+                            addBackLinks(quem, onde, tr, br);
+				var replylinks = 'repback' + onde + br;
+                    }
+            }
+       
+        function addBackLinks (quem, onde, tr, br) {
+            var ondeid = document.getElementById('reply' + onde);
+            if (ondeid != undefined) {
+                    var onderefl = ondeid.querySelectorAll('span.replybacklinks')[0];
+                    if (onderefl.innerHTML.indexOf(quem) == -1){
+                            var e = document.createElement('a');
+                            e.innerHTML='&nbsp;<u>>>' + quem + '</u>';
+                            e.setAttribute('href','/' + br + '/res/' + tr + '.html#' + quem);
+                            e.setAttribute('class','ref|' + br + '|' + tr + '|' + quem);
+                            e.setAttribute('onclick','return highlight(\'' + quem + '\', true);');
+				onderefl.appendChild(e);
+                            return linkslen++;
+                    }
+            }
+        }
+    return 0;
+}
+/**
+* End backlinks.js
+*/
