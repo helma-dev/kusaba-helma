@@ -46,7 +46,8 @@
 		</style>
 	<?php else: ?>
 		<link rel="stylesheet" href="/custom/css/board.css">
-		<link rel="stylesheet" href="/custom/css/board_burichan.css">
+		<link id="sitestyle" rel="stylesheet" href="/custom/css/board_burichan.css">
+		<link id="darkmode" rel="stylesheet" href="/custom/css/board_nachthexe.css" disabled="">
 	<?php endif; ?>
 </head>
 <body class="<?php echo $isInfo ? '' : 'sidebar' ?>">

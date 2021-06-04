@@ -32,9 +32,7 @@
 //--></script>
 
 {if $board.enablecaptcha eq 1}
-	{literal}
-		<script type="text/javascript"> var RecaptchaOptions = { theme : 'clean' }; </script>
-	{/literal}
+	<script src="{%KU_WEBPATH}/lib/javascript/captcheck.min.js"></script>
 {/if}
 </head>
 <body>

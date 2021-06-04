@@ -17,7 +17,8 @@
 	{/if}
 	
 	{* include temporarily *}
-	<link rel="stylesheet" href="/custom/css/board_burichan.css">
+	<link id="sitestyle" rel="stylesheet" href="/custom/css/board_burichan.css">
+        <link id="darksidebar" rel="stylesheet" href="/custom/css/old_shim_dark.css" disabled="">
 </head>
 <body>
 
@@ -27,9 +28,12 @@
 		<h3 id="sidebar-title" class="text-center">{%KU_NAME}</h3>
 		<ul class="list">
 			<li><a href="/">Front Page</a></li>
-			<li>
+			{* <li>
 				<a href="javascript:void(0)" id="sidebar-change-style">Site Styles</a>
-				<!-- todo: site styles -->
+			</li> *}
+			<li>
+				<span class="sidebar-style-chooser"><a href="javascript:void(0)" id="sidebar-change-style">Site Styles </a><span class="sidebar-styles"><a href="javascript:void(0)" id="sidebar-change-style-1">B</a> <a href="javascript:void(0)" id="sidebar-change-style-2">N</a></span></span>
+				<!-- it's good enough -->
 			</li>
 			<li><a href="javascript:void(0)" id="sidebar-toggle-directory">Toggle Directory</a></li>
 			{*
@@ -42,8 +46,9 @@
 		
 		{foreach name=sections item=sect from=$boards}
 			{if count($sect.boards) > 0}
-				<h3 class="sidebar-section-title">{$sect.name}</h3>
-				<ul class="list sidebar-section-list">
+                                {if $sect.hidden}<div class="sidebar-section-hidden">{/if}
+				<h3 class="sidebar-section-title"{if $sect.hidden}style="font-style: italic;"{/if}>{$sect.name}</h3>
+				<ul class="list sidebar-section-list{if $sect.hidden} section-list-hidden{/if}">
 				
 					{foreach name=brds item=brd from=$sect.boards}
 					
@@ -59,15 +64,25 @@
 					{/foreach}
 					
 				</ul>
+				{if $sect.hidden}</div>{/if}
 			{/if}
 		{/foreach}
 	</div>
+
+{if $oldshim} 
+<!-- Darkmode on the sidebar -->
+<script type="text/javascript"><!--
+if (localStorage.getItem('helma-site-style') == 'board_nachthexe') {
+	document.getElementById('darksidebar').disabled = false;
+ }
+//--></script>
+{/if}
 
 {if not $sideload}
 	
 	{include('includes/bodyJquery.html')}
 	<script src="/custom/js/board_lib.js"></script>
-	<script src="/custom/js/board.js"></script>
+	<script src="/custom/js/board.js"></script> 
 </body>
 </html>
 

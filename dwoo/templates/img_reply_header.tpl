@@ -1,5 +1,5 @@
 &#91;<a href="{%KU_WEBFOLDER}{$board.name}/">{t}Return{/t}</a>&#93;
- 
+
 <!-- Auto-Update Script -->
 <script type="text/javascript" src="{$cwebpath}custom/js/update.js"></script>
 

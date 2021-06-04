@@ -1,18 +1,15 @@
 <a name="TOP"></a>
+<div class="Extra_Links" style="display: inline;">
 <b>Links:</b> [<a href="https://worldwitches.fandom.com/wiki/World_Witches_Series_Wiki" target="_blank">Wiki</a>] 
 [<a href="/custom/pastebin.txt" target="_blank">Pastebin</a>] 
 [<a href="https://www.karlsland.net/sw/" target="_blank">Karlsland.net Imageboard</a>]
 <b>Ventrilo:</b> [Texas2.MaxFrag.net 4126 Pass: mikan] 
-<b>Archive:</b> [<a href="https://archive.helma.xyz/{$board.name}/" target="_blank">Current Board</a>] 
-[<a href="https://archive.helma.xyz/" target="_blank">Index</a>] 
+</div>
 <hr>
 <div class="postarea">
 <a id="postbox"></a>
-<form name="postform" id="postform" action="{%KU_CGIPATH}/board.php" method="post" enctype="multipart/form-data"
-{if $board.enablecaptcha eq 1}
-	onsubmit="return checkcaptcha('postform');"
-{/if}
->
+<form name="postform" id="postform" action="{%KU_CGIPATH}/board.php" method="post" enctype="multipart/form-data">
+
 <input type="hidden" name="board" value="{$board.name}" />
 <input type="hidden" name="replythread" value="<!sm_threadid>" />
 {if $board.maximagesize > 0}
@@ -56,19 +53,19 @@
 			{t}Message{/t}
 		</td>
 		<td>
-			<textarea name="message" cols="48" rows="4" accesskey="m"></textarea><br />
+			<textarea name="message" cols="50" rows="5" accesskey="m"></textarea><br />
 			<input type="button" class="sub_btn" name="addbbcode0" value="{t}B{/t}" onclick="bbstyle(0)" onmouseover="Tip('{t}Bold{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode2" value="{t}I{/t}" onclick="bbstyle(2)" onmouseover="Tip('{t}Italic{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode4" value="{t}U{/t}" onclick="bbstyle(4)" onmouseover="Tip('{t}Underline{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode8" value="{t}S{/t}" onclick="bbstyle(8)" onmouseover="Tip('{t}Strikethrough{/t}')" onmouseout="UnTip()">
 			<input type="button" class="sub_btn" name="addbbcode18" value="{t}H{/t}" onclick="bbstyle(18)" onmouseover="Tip('{t}Spoiler{/t}')" onmouseout="UnTip()">
-			<input type="button" class="sub_btn" name="expandpostform" value="{t}+{/t}" onclick="toggleTextareaSize('postform_msg', 48, 4, 75, 20);" onmouseover="Tip('{t}Expand/collapse text field{/t}')" onmouseout="UnTip()">
+			<input type="button" class="sub_btn" name="expandpostform" value="{t}+{/t}" onclick="toggleTextareaSize('postform_msg', 50, 5, 75, 20);" onmouseover="Tip('{t}Expand/collapse text field{/t}')" onmouseout="UnTip()">
 		</td>
 	</tr>
 	{if $board.enablecaptcha eq 1}
 		<tr>
 			<td class="postblock">{t}Captcha{/t}</td>
-			<td colspan="2">{$recaptcha}</td>
+			<td><div class="captcheck_container"></div></td>
 		</tr>
 	{/if}
 	{if $board.uploadtype eq 0 || $board.uploadtype eq 1}

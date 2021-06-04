@@ -12,11 +12,18 @@
 	<link rel="stylesheet" href="/custom/css/board.css">
 	
 	{* include temporarily *}
-	<link rel="stylesheet" href="/custom/css/board_burichan.css">
+	<link id="sitestyle" rel="stylesheet" href="/custom/css/board_burichan.css"> 
 </head>
 <body>
 
 {/if}
+<!-- Dark mode on the front page -->
+<script type="text/javascript"><!--
+if (localStorage.getItem('helma-site-style') == 'board_nachthexe') {
+	document.getElementById('darkmode').disabled = false;
+	document.getElementById('sitestyle').disabled = true;
+ }
+//--></script>
 
 	<div id="news-container">
 		<div id="news-title" class="text-center">

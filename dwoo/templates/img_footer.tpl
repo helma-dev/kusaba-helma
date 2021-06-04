@@ -15,7 +15,7 @@
 				{foreach name=sections item=sect from=$boardlist}
 				
 				[ {foreach name=brds item=brd from=$sect}
-					<a title="{$brd.desc}" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
+					<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
 				{/foreach} ]
 				
 				{/foreach}
@@ -77,8 +77,9 @@
 				{if $thispage eq 0}
 					{t}Previous{/t}
 				{else}
-					<form method="get" action="{%KU_BOARDSFOLDER}{$board.name}/{if ($thispage-1) neq 0}{$thispage-1}.html{/if}">
-						<input value="{t}Previous{/t}" type="submit" /></form>
+					{* This was not working... *} 
+					{* <form method="get" action="{%KU_BOARDSFOLDER}{$board.name}/{if ($thispage-1) neq 0}{$thispage-1}.html{/if}">	<input value="{t}Previous{/t}" type="submit" /></form> *}
+					{t}[{/t}<a href="{%KU_BOARDSPATH}/{$board.name}/{if ($thispage-1) neq 0}{$thispage-1}.html{/if}">{t}Previous{/t}</a>{t}]{/t}
 				{/if}
 			</td>
 			<td>
@@ -102,7 +103,9 @@
 				{if $thispage eq $numpages}
 					{t}Next{/t}
 				{else}
-					<form method="get" action="{%KU_BOARDSPATH}/{$board.name}/{$thispage+1}.html"><input value="{t}Next{/t}" type="submit" /></form>
+					{* This was not working... *} 
+					{* <form method="get" action="{%KU_BOARDSPATH}/{$board.name}/{$thispage+1}.html"><input value="{t}Next{/t}" type="submit" /></form> *}
+					{t}[{/t}<a href="{%KU_BOARDSPATH}/{$board.name}/{$thispage+1}.html">{t}Next{/t}</a>{t}]{/t}
 				{/if}
 	
 			</td>

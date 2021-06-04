@@ -291,7 +291,7 @@ class Board {
 					// prepare the catalog thread container
 					$catalogThreads .= '
 						<div class="catalog-thread">
-							<a href="/'.$this->board['name'].'/res/'.$line['id'].'.html" title="'.$line['subject'].'">
+							<a href="/'.$this->board['name'].'/res/'.$line['id'].'.html" alt="'.$line['subject'].'">
 					';
 					
 					// if file is not removed, show as image
@@ -770,9 +770,7 @@ class Board {
 			$this->dwoo_data->assign('oekposts', $oekposts);
 		}
 		if ($this->board['enablecaptcha'] ==  1) {
-			require_once(KU_ROOTDIR.'recaptchalib.php');
-			$publickey = "6LdVg8YSAAAAAOhqx0eFT1Pi49fOavnYgy7e-lTO";
-			$this->dwoo_data->assign('recaptcha', recaptcha_get_html($publickey));
+			require_once(KU_ROOTDIR.'captcheck.php');
 		}
 		if(($this->board['type'] == 1 && $replythread == 0) || $this->board['type'] != 1) {
 			$postbox .= $this->dwoo->get(KU_TEMPLATEDIR . '/' . $this->board['text_readable'] . '_post_box.tpl', $this->dwoo_data);
@@ -791,7 +789,7 @@ class Board {
 			global $tc_db;
 
 			$output = '';
-			$results = $tc_db->GetAll("SELECT `id` FROM `" . KU_DBPREFIX . "sections` ORDER BY `order` ASC");
+			$results = $tc_db->GetAll("SELECT `id` FROM `" . KU_DBPREFIX . "sections` WHERE `hidden`=0 ORDER BY `order` ASC");
 			$boards = array();
 			foreach($results AS $line) {
 				$results2 = $tc_db->GetAll("SELECT * FROM `" . KU_DBPREFIX . "boards` WHERE `section` = '" . $line['id'] . "' ORDER BY `order` ASC, `name` ASC");
@@ -1007,10 +1005,11 @@ class Post extends Board {
 		}
 	}
 
+
 	function Insert($parentid, $name, $tripcode, $email, $subject, $message, $filename, $file_original, $filetype, $file_md5, $image_w, $image_h, $filesize, $thumb_w, $thumb_h, $password, $timestamp, $bumped, $ip, $posterauthority, $tag, $stickied, $locked, $boardid) {
 		global $tc_db;
 
-		$query = "INSERT INTO `".KU_DBPREFIX."posts` ( `parentid` , `boardid`, `name` , `tripcode` , `email` , `subject` , `message` , `file` , `file_original`, `file_type` , `file_md5` , `image_w` , `image_h` , `file_size` , `file_size_formatted` , `thumb_w` , `thumb_h` , `password` , `timestamp` , `bumped` , `ip` , `ipmd5` , `posterauthority` , `tag` , `stickied` , `locked` ) VALUES ( ".$tc_db->qstr($parentid).", ".$tc_db->qstr($boardid).", ".$tc_db->qstr($name).", ".$tc_db->qstr($tripcode).", ".$tc_db->qstr($email).", ".$tc_db->qstr($subject).", ".$tc_db->qstr($message).", ".$tc_db->qstr($filename).", ".$tc_db->qstr($file_original).", ".$tc_db->qstr($filetype).", ".$tc_db->qstr($file_md5).", ".$tc_db->qstr(intval($image_w)).", ".$tc_db->qstr(intval($image_h)).", ".$tc_db->qstr($filesize).", ".$tc_db->qstr(ConvertBytes($filesize)).", ".$tc_db->qstr($thumb_w).", ".$tc_db->qstr($thumb_h).", ".$tc_db->qstr($password).", ".$tc_db->qstr($timestamp).", ".$tc_db->qstr($bumped).", ".$tc_db->qstr(md5_encrypt($ip, KU_RANDOMSEED)).", '".md5($ip)."', ".$tc_db->qstr($posterauthority).", ".$tc_db->qstr($tag).", ".$tc_db->qstr($stickied).", ".$tc_db->qstr($locked)." )";
+		$query = "INSERT INTO `".KU_DBPREFIX."posts` ( `parentid` , `boardid`, `name` , `tripcode` , `email` , `subject` , `message` , `file` , `file_original`, `file_type` , `file_md5` , `image_w` , `image_h` , `file_size` , `file_size_formatted` , `thumb_w` , `thumb_h` , `password` , `timestamp` , `bumped` , `ip` , `ipmd5` , `posterauthority` , `tag` , `stickied` , `locked`, `posterid` ) VALUES ( ".$tc_db->qstr($parentid).", ".$tc_db->qstr($boardid).", ".$tc_db->qstr($name).", ".$tc_db->qstr($tripcode).", ".$tc_db->qstr($email).", ".$tc_db->qstr($subject).", ".$tc_db->qstr($message).", ".$tc_db->qstr($filename).", ".$tc_db->qstr($file_original).", ".$tc_db->qstr($filetype).", ".$tc_db->qstr($file_md5).", ".$tc_db->qstr(intval($image_w)).", ".$tc_db->qstr(intval($image_h)).", ".$tc_db->qstr($filesize).", ".$tc_db->qstr(ConvertBytes($filesize)).", ".$tc_db->qstr($thumb_w).", ".$tc_db->qstr($thumb_h).", ".$tc_db->qstr($password).", ".$tc_db->qstr($timestamp).", ".$tc_db->qstr($bumped).", ".$tc_db->qstr(md5_encrypt($ip, KU_RANDOMSEED)).", '".md5($ip)."', ".$tc_db->qstr($posterauthority).", ".$tc_db->qstr($tag).", ".$tc_db->qstr($stickied).", ".$tc_db->qstr($locked).", '".substr(md5($ip),0,8)."' )";
 		$tc_db->Execute($query);
 		$id = $tc_db->Insert_Id();
 		if(!$id || KU_DBTYPE == 'sqlite') {
@@ -1022,6 +1021,16 @@ class Post extends Board {
 			$tc_db->Execute("UPDATE `".KU_DBPREFIX."posts` SET `id` = '".$this->board['start']."' WHERE `boardid` = ".$boardid);
 			return $this->board['start'];
 		}
+
+			// Generate unique (per-thread) poster ID
+		if ($parentid == 0) {
+			$secure_poster_id =  substr(base64_encode(hash("sha256", $id.md5($ip).$boardid.KU_IDSALT, true)),0,8);
+		} else {
+			$secure_poster_id =  substr(base64_encode(hash("sha256", $parentid.md5($ip).$boardid.KU_IDSALT, true)),0,8);
+		}
+		$tc_db->Execute("UPDATE `".KU_DBPREFIX."posts` SET `posterid` = '".$secure_poster_id."' WHERE `id` = ".$id." AND `boardid` = ".$boardid." AND `ipmd5` = '".md5($ip)."'");
+			//
+
 		return $id;
 	}
 

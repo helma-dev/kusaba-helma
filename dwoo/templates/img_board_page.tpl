@@ -48,7 +48,7 @@
 				{else}
 					{$post.file}.{$post.file_type}</a>
 				{/if}
-				- ({$post.file_size_formatted}
+				- ( {$post.file_size_formatted}
 				{if $post.id3.comments_html.bitrate neq 0 || $post.id3.audio.sample_rate neq 0}
 					{if $post.id3.audio.bitrate neq 0}
 						- {round($post.id3.audio.bitrate / 1000)} kbps
@@ -65,10 +65,10 @@
 				{/if}
 				{if $post.file_original neq '' && $post.file_original neq $post.file}
 					, {$post.file_original}.{$post.file_type}
-				{/if}
-				)
+					<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
+				{/if})
 				{if $post.id3.playtime_string neq ''}
-					{t}Length{/t}: {$post.id3.playtime_string}
+					{t} [Length{/t}: {$post.id3.playtime_string}{t}]{/t}
 				{/if}
 				</span>
 				{if %KU_THUMBMSG}
@@ -160,7 +160,7 @@
 				{$post.reflink}
 			</span>
 			{if $board.showid}
-				ID: {$post.ipmd5|substr:0:6}
+				<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
 			{/if}
 			<span class="extrabtns">
 			{if $post.locked eq 1}
@@ -250,7 +250,7 @@
 							{$post.reflink}
 						</span>
 						{if $board.showid}
-							ID: {$post.ipmd5|substr:0:6}
+							<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
 						{/if}
 						<span class="extrabtns">
 						{if $post.locked eq 1}
@@ -291,7 +291,7 @@
 							{else}
 								{$post.file}.{$post.file_type}</a>
 							{/if}
-							- ({$post.file_size_formatted}
+							- ( {$post.file_size_formatted}
 							{if $post.id3.comments_html.bitrate neq 0 || $post.id3.audio.sample_rate neq 0}
 								{if $post.id3.audio.bitrate neq 0}
 									- {round($post.id3.audio.bitrate / 1000)} kbps
@@ -308,10 +308,10 @@
 							{/if}
 							{if $post.file_original neq '' && $post.file_original neq $post.file}
 								, {$post.file_original}.{$post.file_type}
-							{/if}
-							)
+								<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
+							{/if})
 							{if $post.id3.playtime_string neq ''}
-								{t}Length{/t}: {$post.id3.playtime_string}
+								 {t} [Length{/t}: {$post.id3.playtime_string}{t}]{/t}
 							{/if}
 							</span>
 							{if %KU_THUMBMSG}

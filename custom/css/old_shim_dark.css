@@ -1,0 +1,6 @@
+/* sidebar */
+#sidebar-container{background-color:#1d1f21; color:rgb(197, 200, 198)}
+.sidebar-section-title{background:#000}
+#sidebar-title{background:black!important;}
+a, a:visited{color:rgb(129, 162, 190)!important;}
+a:hover{color:rgb(95, 137, 172)!important;}

@@ -116,8 +116,7 @@ if (!$singlepost) {
  	$page .= $board_class->dwoo->get(KU_TEMPLATEDIR . '/' . $board_class->board['text_readable'] . '_reply_header.tpl', $board_class->dwoo_data);
 } else {
 	$tpl['title'] = '';
-	$tpl['head'] = '';
-	$page .= '<link rel="stylesheet" href="' . getCLBoardPath() . 'css/img_global.css" />';
+	$tpl['head'] = ''; 
 }
 
 if ($board_class->board['type'] == 1) {

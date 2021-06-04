@@ -6,7 +6,21 @@
 	$('#sidebar-toggle').on('click', function () {
 		$(d.body).toggleClass('open');
 	});
+
 	
+	$('#sidebar-change-style-1').on('click', function () {
+		localStorage.setItem('helma-site-style','board_burichan');
+		window.top.location.reload();
+	});
+
+	$('#sidebar-change-style-2').on('click', function () {
+		localStorage.setItem('helma-site-style','board_nachthexe');
+		window.top.location.reload()
+	});
+
+
+	// unfinished
+	// $('#sidebar-change-style').on('click', function () {}
 	// variables
 	/*var changeStyle = function (targetStyle) {
 		var name = '.css-board',
@@ -58,8 +72,7 @@
 	});*/
 	
 	// change style
-	$('#sidebar-change-style').one('click', function () {
-		alert('Still under development');
+	//$('#sidebar-change-style').one('click', function () {
 		/*$(this).hide();
 		
 		$('#menu-site-style-list').show().find('a').on('click', function () {
@@ -75,7 +88,7 @@
 			
 			cache.set('main-style', targetId);
 		});*/
-	});
+	//});
 	
 	/*function changeStyle (targetStyle) {
 		
@@ -102,3 +115,4 @@
 	
 	
 })(document, window, lscache);
+

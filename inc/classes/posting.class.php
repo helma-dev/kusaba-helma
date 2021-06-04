@@ -132,40 +132,31 @@ class Posting {
 		}
 	}
 
-	function CheckCaptcha() {
-		global $board_class;
+    function CheckCaptcha() {
+            global $board_class;
 
-	// Cloudflare support
-	if(isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-		$_SERVER['REMOTE_ADDR']= $_SERVER["HTTP_CF_CONNECTING_IP"];
-	}
 
-		/* If the board has captcha's enabled... */
-		if ($board_class->board['enablecaptcha'] == 1) {
-			if ($board_class->board['type'] == 1 && $_POST['replythread']) {
-				/* Check if they entered the correct code. If not... */
-				if ($_SESSION['security_code'] != strtolower($_POST['captcha']) || empty($_SESSION['security_code'])) {
-					/* Kill the script, stopping the posting process */
-					exitWithErrorPage(_gettext('Incorrect captcha entered.'));
-				}
-			}
-			else {
-				require_once(KU_ROOTDIR.'recaptchalib.php');
-				$privatekey = "6LdVg8YSAAAAALayugP2r148EEQAogHPfQOSYow-";
+            /* If the board has captcha's enabled... */
+            if ($board_class->board['enablecaptcha'] == 1) {
+                    if ($board_class->board['type'] == 1 && $_POST['replythread']) {
+                            /* Check if they entered the correct code. If not... */
+                            if ($_SESSION['security_code'] != strtolower($_POST['captcha']) || empty($_SESSION['security_code'])) {
+                                   /* Kill the script, stopping the posting process */
+                                    exitWithErrorPage(_gettext('Incorrect captcha entered.'));
+                            }
+                    }
+                    else {
+                            require_once(KU_ROOTDIR.'captcheck.php');
+                            $resp = captcheck_check_answer ($_POST['captcheck_session_code'],
+                                                            $_POST['captcheck_selected_answer']
+                            );
+                            if (!$resp->is_valid) {
+                                    exitWithErrorPage(_gettext('Incorrect captcha entered.'));
+                            }
+                    }
+            }
+    }
 
-				// was there a reCAPTCHA response?
-				$resp = recaptcha_check_answer ($privatekey, 
-					$_SERVER["REMOTE_ADDR"], 
-					$_POST["recaptcha_challenge_field"], 
-					$_POST["recaptcha_response_field"]
-				); 
-				if (!$resp->is_valid) {
-					// Show error and give user opportunity to try again.
-					exitWithErrorPage(_gettext('Incorrect captcha entered.'));
-				}
-			}
-		}
-	}
 
 	function CheckBannedHash() {
 		global $tc_db, $board_class, $bans_class;

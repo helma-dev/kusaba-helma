@@ -55,11 +55,11 @@
 				{/if}
 				{if $post.file_original neq '' && $post.file_original neq $post.file}
 					, {$post.file_original}.{$post.file_type}
+					<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
 				{/if}
-				)
 				{if $post.id3.playtime_string neq ''}
 					{t}Length{/t}: {$post.id3.playtime_string}
-				{/if}
+				{/if})
 				</span>
 				{if %KU_THUMBMSG}
 					<span class="thumbnailmsg"> 
@@ -149,7 +149,7 @@
 				{$post.reflink}
 			</span>
 			{if $board.showid}
-				ID: {$post.ipmd5|substr:0:6}
+				<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
 			{/if}
 			<span id="dnb-{$board.name}-{$post.id}-y"></span>
 			<br />
@@ -223,9 +223,9 @@
 
 						<span class="reflink">
 							{$post.reflink}
-						</span>
+						</span> 
 						{if $board.showid}
-							ID: {$post.ipmd5|substr:0:6}
+							<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
 						{/if}
 						<span class="extrabtns">
 						{if $post.locked eq 1}
@@ -283,11 +283,11 @@
 							{/if}
 							{if $post.file_original neq '' && $post.file_original neq $post.file}
 								, {$post.file_original}.{$post.file_type}
+								<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
 							{/if}
-							)
 							{if $post.id3.playtime_string neq ''}
 								{t}Length{/t}: {$post.id3.playtime_string}
-							{/if}
+							{/if})
 							</span>
 							{if %KU_THUMBMSG}
 								<span class="thumbnailmsg"> 

@@ -7,6 +7,9 @@
 
 #old-shim-toggle-container {display:none}
 
+.sidebar-section-hidden > .section-list-hidden{display:none;}
+.sidebar-section-hidden:hover > .section-list-hidden{display:revert;}
+
 @media (min-width:768px) {
 	body.old-shim-sidebar {
 		position:relative; padding-left:248px!important;

@@ -194,6 +194,12 @@ if (!$cache_loaded) {
 
 	// Debug
 		$cf['KU_DEBUG'] = false; // When enabled, debug information will be printed (Warning: all queries will be shown publicly)
+		
+    
+	// Custom
+        $cf['KU_IDSALT'] = 'CHANGEME'; // Used to generate unique poster IDs, any large amount (35+ characters) of random numbers/letters will do
+        $cf['KU_CAPTCHECK_API_SERVER'] = 'https://captcheck.netsyms.com/api.php'; // API server for Captcheck
+
 
 	// Post-configuration actions, don't modify these
 		$cf['KU_VERSION']    = '0.9.3';

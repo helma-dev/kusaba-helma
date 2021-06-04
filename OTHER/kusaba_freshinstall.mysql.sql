@@ -275,6 +275,7 @@ CREATE TABLE `PREFIX_posts` (
   `deleted_timestamp` int(20) NOT NULL default '0',
   `IS_DELETED` tinyint(1) NOT NULL default '0',
   `bumped` int(20) unsigned NOT NULL default '0',
+  `posterid` varchar(32) NOT NULL,
   PRIMARY KEY  (`boardid`,`id`),
   KEY `parentid` (`parentid`),
   KEY `bumped` (`bumped`),

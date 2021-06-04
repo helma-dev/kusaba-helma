@@ -2,6 +2,42 @@
 
 </head>
 <body class="boxed board-page">
+<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script>
+<!-- Dark mode on catalog -->
+<script type="text/javascript"><!--
+function ReadSiteStyle(){
+	if (localStorage.getItem('helma-site-style') == 'board_nachthexe'){
+                document.getElementById("sitestyle").disabled = true;
+                document.getElementById("darkmode").disabled = false;
+	      
+                config .BgColor = '#232323';
+                config .BorderColor = '#000000';
+        	config .FontColor = '#DDDDDD';
+        } else if (localStorage.getItem('helma-site-style') != 'board_burichan'){
+	        localStorage.setItem('helma-site-style', 'board_burichan');
+        }
+} 
+
+ReadSiteStyle();
+
+function ToggleSiteStyle(){
+        if (localStorage.getItem('helma-site-style') == 'board_nachthexe'){
+                document.getElementById("sitestyle").disabled = false;
+                document.getElementById("darkmode").disabled = true;
+                
+		localStorage.setItem('helma-site-style','board_burichan');
+                
+		config .BgColor = '#E2E7FF';
+                config .BorderColor = '#003099';
+        	config .FontColor = '#000044';
+        } else {
+                localStorage.setItem('helma-site-style','board_nachthexe');
+        	
+		ReadSiteStyle()
+	}
+}
+//--></script>
+
 	<!--[if lt IE 9]>
 	<div class="old-ie-error">
 		<b>Your browser is out of date.</b> It may not display all features of this and other websites.
@@ -12,11 +48,9 @@
 		<div class="board-nav-list float-left">
 			{if %KU_GENERATEBOARDLIST}
 				{foreach name=sections item=sect from=$boardlist}
-				
-				[ {foreach name=brds item=brd from=$sect}
-					<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
-				{/foreach} ]
-				
+					[ {foreach name=brds item=brd from=$sect}
+						<a onmouseover="Tip('{t}{$brd.desc}{/t}')" onmouseout="UnTip()" href="{%KU_BOARDSFOLDER}{$brd.name}/">{$brd.name}</a>{if $.foreach.brds.last}{else} / {/if}
+					{/foreach} ]
 				{/foreach}
 			{else}
 				{if is_file($boardlist)}
@@ -25,6 +59,7 @@
 			{/if}
 		</div>
 		<div class="board-nav-misc-link float-right">
+			[<a href="#" onmouseover="Tip('Toggle dark mode')" onmouseout="UnTip()" onclick="ToggleSiteStyle()">Dark Mode</a>]
 			[<a href="{%KU_WEBPATH}/manage.php" target="_top">Manage</a>]
 			[<a href="{%KU_WEBPATH}/custom/settings.html" class="board-settings">Settings</a>]
 			[<a href="{%KU_WEBPATH}" target="_top">Home</a>]
@@ -88,20 +123,15 @@
 //--></script>
 
 {if $board.enablecaptcha eq 1}
-	{literal}
-		<script type="text/javascript"> var RecaptchaOptions = { theme : 'clean' }; </script>
-	{/literal}
+	<script src="{%KU_WEBPATH}/lib/javascript/captcheck.min.js"></script>
 {/if}
 </head>
 <body>
 <!-- jQuery v3.3.1 -->
 <script type="text/javascript" src="{$cwebpath}lib/javascript/jquery.min.js"></script> 
 <!-- Extra Scripts-->
-<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script> 
+<script type="text/javascript" src="{$cwebpath}custom/js/wz_tooltip.js"></script>
 <script type="text/javascript" src="{$cwebpath}custom/js/extra.js"></script>
-
-
-
 
 <nav class="topbar">
 <div class="adminbar">
@@ -130,7 +160,7 @@
 	[<a href="{%KU_BOARDSPATH}/{$board.name}/rss.xml" type="application/rss+xml" onmouseover="Tip('{t}Subscribe to /{$board.name}/{/t}')" onmouseout="UnTip()">{t}RSS{/t}</a>]&nbsp;
 {/if}
 
-[<a href="{%KU_WEBPATH}/custom/settings.html">{t}Settings{/t}</a>]&nbsp;
+[<a target="_blank" href="{%KU_WEBPATH}/custom/settings.html">{t}Settings{/t}</a>]&nbsp;
 
 [<a href="{%KU_WEBPATH}" target="_top">{t}Home{/t}</a>]&nbsp;[<a href="{%KU_CGIPATH}/manage.php" target="_top">{t}Manage{/t}</a>]
 </div>
@@ -174,6 +204,7 @@
 	/{$board.name}/ - 
 {/if}
 {$board.desc}</div>
+
 {$board.includeheader}
 <hr />
 

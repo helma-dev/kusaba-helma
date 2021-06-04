@@ -197,3 +197,4 @@ background-color: #444;
 .reflinkpreview .doubledash{
     display:none;
 }
+.captcheck_container{filter:grayscale(100%) invert(100%)} 

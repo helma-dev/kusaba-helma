@@ -160,6 +160,7 @@ form .trap {
 }
 .threadcontainer {
 	display:inline-block;
+	width:100%;
 }
 .replybacklinks:not(:empty)::before{content: "Replies:";}
 .replybacklinks {font-size: 75%;font-style: italic;}
@@ -191,6 +192,18 @@ display: none;
 color:white!important;
 }
 
+
+.embed{
+margin-right:20px;
+margin-bottom:4px!important;
+margin-left:-20px;
+margin-top:-8px;
+}
+
+
+.reversesearch{ display:none}
+.filesize:hover > .reversesearch{ display:contents }
+acronym{text-decoration:underline dotted!important}
 /* Mobile */
 @media only screen and (max-width:640px) {
 html {

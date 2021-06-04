@@ -11,8 +11,9 @@
 	<link rel="stylesheet" href="/custom/css/common.css">
 	<link rel="stylesheet" href="/custom/css/board.css">
 	
-	{* include temporarily *}
-	<link rel="stylesheet" href="/custom/css/board_burichan.css">
+	<!-- Site styling -->
+	<link id="sitestyle" rel="stylesheet" href="/custom/css/board_burichan.css">
+        <link id="darkmode" rel="stylesheet" href="/custom/css/board_nachthexe.css" disabled="">
 
 {else}
 
@@ -33,6 +34,7 @@
 
 <!-- old shim -->
 <script src="/custom/js/old_shim.js"></script>
-<link rel="stylesheet" href="/custom/css/old_shim.css">
+<link rel="stylesheet" href="/custom/css/old_shim.css"> 
+
 
 {/if}
