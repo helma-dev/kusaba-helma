@@ -64,7 +64,7 @@ if (!$cache_loaded) {
 		$cf['KU_DBDATABASE']      = 'kusaba'; // Database... database. On SQLite this will be the path to your database file. Secure this file.
 		$cf['KU_DBUSERNAME']      = 'CHANGEME'; // Database username. On SQLite this has no effect.
 		$cf['KU_DBPASSWORD']      = 'CHANGEME'; // Database password. On SQLite this has no effect.
-		$cf['KU_DBPREFIX']        = ''; // Database table prefix (leave it blank)
+		$cf['KU_DBPREFIX']        = ''; // Database table prefix 
 		$cf['KU_DBUSEPERSISTENT'] = false; // Use persistent connection to database
 
 	// Imageboard info

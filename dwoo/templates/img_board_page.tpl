@@ -160,7 +160,7 @@
 				{$post.reflink}
 			</span>
 			{if $board.showid}
-				<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
+				<span class="posterid">ID: {$post.posterid|substr:0:8}</span>
 			{/if}
 			<span class="extrabtns">
 			{if $post.locked eq 1}
@@ -250,7 +250,7 @@
 							{$post.reflink}
 						</span>
 						{if $board.showid}
-							<span class="posterid">ID: {$post.ipmd5|substr:0:6}</span>
+							<span class="posterid">ID: {$post.posterid|substr:0:8}</span>
 						{/if}
 						<span class="extrabtns">
 						{if $post.locked eq 1}

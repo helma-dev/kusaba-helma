@@ -90,7 +90,7 @@
 				<li><a href="manage_page.php?action=modlog">ModLog</a></li>
 				<li><a href="manage_page.php?action=proxyban">Ban Proxy List</a></li>
 				<li><a href="manage_page.php?action=sql">SQL Query</a></li>
-				<li><a href="manage_page.php?action=cleanup">Cleanup</a></li>
+				<li><a href="manage_page.php?action=cleanup">Cleanup</a></li> 				
 				
 				{if %KU_APC}
 					<li><a href="manage_page.php?action=apc">APC</a></li>

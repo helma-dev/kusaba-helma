@@ -1024,9 +1024,9 @@ class Post extends Board {
 
 			// Generate unique (per-thread) poster ID
 		if ($parentid == 0) {
-			$secure_poster_id =  substr(base64_encode(hash("sha256", $id.md5($ip).$boardid.KU_IDSALT, true)),0,8);
+			$secure_poster_id =  substr(hash("sha256", $id.md5($ip).$boardid.KU_IDSALT, false),0,8);
 		} else {
-			$secure_poster_id =  substr(base64_encode(hash("sha256", $parentid.md5($ip).$boardid.KU_IDSALT, true)),0,8);
+			$secure_poster_id =  substr(hash("sha256", $parentid.md5($ip).$boardid.KU_IDSALT, false),0,8);
 		}
 		$tc_db->Execute("UPDATE `".KU_DBPREFIX."posts` SET `posterid` = '".$secure_poster_id."' WHERE `id` = ".$id." AND `boardid` = ".$boardid." AND `ipmd5` = '".md5($ip)."'");
 			//
