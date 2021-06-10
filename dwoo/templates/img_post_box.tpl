@@ -84,7 +84,7 @@
 			<td>
 			<input type="file" name="imagefile" size="35" accesskey="f" />
 			{if $replythread eq 0 && $board.enablenofile eq 1 }
-[<input type="checkbox" name="nofile" id="nofile" accesskey="q" /><label for="nofile"> {t}No File{/t}</label>] {/if} {if $board.name eq 'sw' || $board.name eq 'cr' || $board.name eq 'ot'} <input type="checkbox" name="spoiler" id="spoiler" /><label for="spoiler">{t}Spoiler{/t}</label> {/if} </td>
+[<input type="checkbox" name="nofile" id="nofile" accesskey="q" /><label for="nofile"> {t}No File{/t}</label>] {/if} {if $board.name eq 'sw' || $board.name eq 'cr' || $board.name eq 'ot' || $board.name eq 'testboard' || $board.name eq 'GuP'} <input type="checkbox" name="spoiler" id="spoiler" /><label for="spoiler">{t}Spoiler{/t}</label> {/if} </td>
 			</td>
 		</tr>
 	{/if}

@@ -207,7 +207,8 @@ acronym{text-decoration:underline dotted!important}
 
 .reply audio{margin-top: 2px;} 
 .audiotitle{font-weight:bold}
-summary{cursor: pointer}
+.filesize.audiodata {display: block;margin: 0;}
+summary{cursor: pointer;display: inline list-item;}
 /* Mobile */
 @media only screen and (max-width:640px) {
 html {

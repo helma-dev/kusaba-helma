@@ -38,13 +38,16 @@ class Upload {
 
 	function HandleUpload() {
 		global $tc_db, $board_class, $is_oekaki, $oekaki;
-		
-		$allowed_boards = array('sw', 'cr', 'ot'); 
-		if(!in_array($board_class->board['name'], $allowed_boards)) { 
-		if (isset($_POST['spoiler'])) 
-		ExitWithErrorPage('Spoiler function is not allowed in this board.'); 
+
+		$allowed_boards = array('sw', 'cr', 'ot', 'GuP');
+		$video_types = array('.webm', '.mp4', '.m4v');
+		$audio_types = array('.mp3','.flac','.wav');
+
+		if(!in_array($board_class->board['name'], $allowed_boards)) {
+		if (isset($_POST['spoiler']))
+		ExitWithErrorPage('Spoiler function is not allowed in this board.');
 		}
-		
+
 		if (!$is_oekaki) {
 			if ($board_class->board['type'] == 0 || $board_class->board['type'] == 2 || $board_class->board['type'] == 3) {
 				$imagefile_name = isset($_FILES['imagefile']) ? $_FILES['imagefile']['name'] : '';
@@ -104,10 +107,10 @@ class Upload {
 
 					$this->file_name = substr(htmlspecialchars(preg_replace('/(.*)\..+/','\1',$_FILES['imagefile']['name']), ENT_QUOTES), 0, 50);
 					$this->file_name = str_replace('.','_',$this->file_name);
-					if (isset($_POST['spoiler'])) 
-						$this->original_file_name = 'Spoiler Picture'; 
-					else 
-						$this->original_file_name = $this->file_name; 
+					if (isset($_POST['spoiler']))
+						$this->original_file_name = 'Spoiler Picture';
+					else
+						$this->original_file_name = $this->file_name;
 
 					$this->file_md5 = md5_file($_FILES['imagefile']['tmp_name']);
 
@@ -168,8 +171,8 @@ class Upload {
 
 								if ($_FILES['imagefile']['size'] == filesize($this->file_location)) {
 									if (isset($_POST['spoiler'])) {
-										$spoiler_dir = KU_BOARDSDIR . 'css/images/spoiler.jpg'; 
-										if(!copy($spoiler_dir, $this->file_thumb_location)) { 
+										$spoiler_dir = KU_BOARDSDIR . 'css/images/spoiler.jpg';
+										if(!copy($spoiler_dir, $this->file_thumb_location)) {
 										exitWithErrorPage(_gettext('File was not properly thumbnailed'));
 										}
 									} else {
@@ -204,7 +207,9 @@ class Upload {
 							/* Fetch the mime requirement for this special filetype */
 							$filetype_required_mime = $tc_db->GetOne("SELECT `mime` FROM `" . KU_DBPREFIX . "filetypes` WHERE `filetype` = " . $tc_db->qstr(substr($this->file_type, 1)));
 
+
 							$this->file_name = time() . mt_rand(1, 99);
+
 
 							/* If this board has a load balance url and password configured for it, attempt to use it */
 							if ($board_class->board['loadbalanceurl'] != '' && $board_class->board['loadbalancepassword'] != '') {
@@ -226,13 +231,66 @@ class Upload {
 							/* Otherwise, use this script alone */
 							} else {
 								$this->file_location = KU_BOARDSDIR . $board_class->board['name'] . '/src/' . $this->file_name . $this->file_type;
-								
+
 								if (file_exists($this->file_location)) {
 									exitWithErrorPage(_gettext('A file by that name already exists'));
 									die();
 								}
-								
-								if($this->file_type == '.mp3') {
+
+							  if (in_array($this->file_type, $video_types)) {
+									$this->file_thumb_location = KU_BOARDSDIR . $board_class->board['name'] . '/thumb/' . $this->file_name .'s.jpg';
+									# a
+									if (isset($_POST['spoiler'])) {
+										$spoiler_dir = KU_BOARDSDIR . 'css/images/spoiler.jpg';
+										if(!copy($spoiler_dir, $this->file_thumb_location)) {
+										exitWithErrorPage(_gettext('File was not properly thumbnailed'));
+										}
+									} else {
+										$this->imgWidth = exec('ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv:p=0 ' . $_FILES['imagefile']['tmp_name']);
+										$this->imgHeight = exec('ffprobe -v error -select_streams v:0 -show_entries stream=height -of csv:p=0 ' . $_FILES['imagefile']['tmp_name']);
+										if (!$this->isreply){
+											exec('ffmpeg -itsoffset -1 -i ' . $_FILES['imagefile']['tmp_name'] . ' -vframes 1 -vf "scale=200:200:force_original_aspect_ratio=decrease" ' . $this->file_thumb_location);
+										} else {
+											exec('ffmpeg -itsoffset -1 -i ' . $_FILES['imagefile']['tmp_name'] . ' -vframes 1 -vf "scale=125:125:force_original_aspect_ratio=decrease" ' . $this->file_thumb_location);
+										}
+									}
+									$imageDim_thumb = getimagesize($this->file_thumb_location);
+									$this->imgWidth_thumb = $imageDim_thumb[0];
+									$this->imgHeight_thumb = $imageDim_thumb[1];
+									$imageused = true;
+								} elseif($this->file_type == '.webp') {
+									$this->file_thumb_location = KU_BOARDSDIR . $board_class->board['name'] . '/thumb/' . $this->file_name .'s.webp';
+									# a
+									if (isset($_POST['spoiler'])) {
+										$spoiler_dir = KU_BOARDSDIR . 'css/images/spoiler.jpg';
+										if(!copy($spoiler_dir, $this->file_thumb_location)) {
+										exitWithErrorPage(_gettext('File was not properly thumbnailed'));
+										}
+									} else {
+										/* apparently we must use imagick to get webp dimensions, rather than getimagesize() */
+										/* https://bitbucket.org/Therapont/fbe-410/src/master/inc/classes/upload.class.php#lines-118 */
+										$this->imgHeight = exec('identify -precision 14 -format "%h" ' . $_FILES['imagefile']['tmp_name']);
+										$this->imgWidth = exec('identify -precision 14 -format "%w" ' . $_FILES['imagefile']['tmp_name']);
+										/* * * */
+										if (!$this->isreply){
+											if($this->imgWidth > $this->imgHeight){
+												exec('convert ' . $_FILES['imagefile']['tmp_name'] . ' -resize 200 -quality 70 ' . $this->file_thumb_location);
+											} else {
+												exec('convert ' . $_FILES['imagefile']['tmp_name'] . ' -resize x200 -quality 70 ' . $this->file_thumb_location);
+											}
+										} else {
+											if($this->imgWidth > $this->imgHeight){
+												exec('convert ' . $_FILES['imagefile']['tmp_name'] . ' -resize 125 -quality 70 ' . $this->file_thumb_location);
+											} else {
+												exec('convert ' . $_FILES['imagefile']['tmp_name'] . ' -resize x125 -quality 70 ' . $this->file_thumb_location);
+											}
+										}
+										/* again */
+										$this->imgWidth_thumb = exec('identify -precision 14 -format "%w" ' . $this->file_thumb_location );
+										$this->imgHeight_thumb = exec('identify -precision 14 -format "%h" ' . $this->file_thumb_location );
+										$imageused = true;
+									}
+								} elseif($this->file_type == '.mp3') {
 									require_once(KU_ROOTDIR . 'lib/getid3/getid3.php');
 
 									$getID3 = new getID3;
@@ -274,8 +332,6 @@ class Upload {
 										$imageused = true;
 										unlink($this->file_location.".tmp");
 									}
-
-
 								}
 
 								/* Move the file from the post data to the server */

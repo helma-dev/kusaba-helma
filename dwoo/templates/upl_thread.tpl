@@ -10,12 +10,14 @@
 			
 			{if ($post.file neq '' || $post.file_type neq '' ) && (( $post.videobox eq '' && $post.file neq '') && $post.file neq 'removed')}
 				<span class="filesize">
-				{if $post.file_type eq 'mp3'}
+				{if $post.file_type eq 'mp3'|| $post.file_type eq 'flac' || $post.file_type eq 'wav' }
 					{t}Audio{/t}
+				{elseif $post.file_type eq 'webm'|| $post.file_type eq 'mp4' || $post.file_type eq 'm4v' }
+					{t}Video{/t}
 				{else}
 					{t}File{/t}
 				{/if}
-				{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'png' && $post.videobox eq ''}
+				{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'webp' && $post.file_type neq 'png' && $post.videobox eq ''}
 					<a 
 					{if %KU_NEWWINDOW}
 						target="_blank" 
@@ -24,20 +26,7 @@
 				{else}
 					<a href="{$file_path}/src/{$post.file}.{$post.file_type}" onclick="javascript:expandimg('{$post.id}', '{$file_path}/src/{$post.file}.{$post.file_type}', '{$file_path}/thumb/{$post.file}s.{$post.file_type}', '{$post.image_w}', '{$post.image_h}', '{$post.thumb_w}', '{$post.thumb_h}');return false;">
 				{/if}
-				{if isset($post.id3.comments_html)}
-					{if $post.id3.comments_html.artist.0 neq ''}
-					{$post.id3.comments_html.artist.0}
-						{if $post.id3.comments_html.title.0 neq ''}
-							- 
-						{/if}
-					{/if}
-					{if $post.id3.comments_html.title.0 neq ''}
-						{$post.id3.comments_html.title.0}
-					{/if}
-					</a>
-				{else}
-					{$post.file}.{$post.file_type}</a>
-				{/if}
+				{$post.file}.{$post.file_type}</a>
 				- ({$post.file_size_formatted}
 				{if $post.id3.comments_html.bitrate neq 0 || $post.id3.audio.sample_rate neq 0}
 					{if $post.id3.audio.bitrate neq 0}
@@ -56,14 +45,11 @@
 				{if $post.file_original neq '' && $post.file_original neq $post.file}
 					, {$post.file_original}.{$post.file_type}
 					<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
-				{/if}
-				{if $post.id3.playtime_string neq ''}
-					{t}Length{/t}: {$post.id3.playtime_string}
 				{/if})
 				</span>
 				{if %KU_THUMBMSG}
 					<span class="thumbnailmsg"> 
-					{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'png' && $post.videobox eq ''}
+					{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'webp' && $post.file_type neq 'png' && $post.videobox eq ''}
 						{t}Extension icon displayed, click image to open file.{/t}
 					{else}
 						{t}Thumbnail displayed, click image for full size.{/t}
@@ -72,7 +58,7 @@
 				{/if}
 				<br />
 			{/if}
-			{if $post.videobox eq '' && $post.file neq '' && ( $post.file_type eq 'jpg' || $post.file_type eq 'gif' || $post.file_type eq 'png')}
+			{if $post.videobox eq '' && $post.file neq '' && ( $post.file_type eq 'jpg' || $post.file_type eq 'webp' || $post.file_type eq 'gif' || $post.file_type eq 'png')}
 				{if $post.file eq 'removed'}
 					<div class="nothumb">
 						{t}File<br />Removed{/t}
@@ -238,12 +224,14 @@
 						<span id="dnb-{$board.name}-{$post.id}-n"></span>
 						{if ($post.file neq '' || $post.file_type neq '' ) && (( $post.videobox eq '' && $post.file neq '') && $post.file neq 'removed')}
 							<br /><span class="filesize">
-							{if $post.file_type eq 'mp3'}
+							{if $post.file_type eq 'mp3'|| $post.file_type eq 'flac' || $post.file_type eq 'wav' }
 								{t}Audio{/t}
+							{elseif $post.file_type eq 'webm'|| $post.file_type eq 'mp4' || $post.file_type eq 'm4v' }
+								{t}Video{/t}
 							{else}
 								{t}File{/t}
 							{/if}
-							{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'png' && $post.videobox eq ''}
+							{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'webp' && $post.file_type neq 'png' && $post.videobox eq ''}
 								<a 
 								{if %KU_NEWWINDOW}
 									target="_blank" 
@@ -252,20 +240,7 @@
 							{else}
 								<a href="{$file_path}/src/{$post.file}.{$post.file_type}" onclick="javascript:expandimg('{$post.id}', '{$file_path}/src/{$post.file}.{$post.file_type}', '{$file_path}/thumb/{$post.file}s.{$post.file_type}', '{$post.image_w}', '{$post.image_h}', '{$post.thumb_w}', '{$post.thumb_h}');return false;">
 							{/if}
-							{if isset($post.id3.comments_html)}
-								{if $post.id3.comments_html.artist.0 neq ''}
-								{$post.id3.comments_html.artist.0}
-									{if $post.id3.comments_html.title.0 neq ''}
-										- 
-									{/if}
-								{/if}
-								{if $post.id3.comments_html.title.0 neq ''}
-									{$post.id3.comments_html.title.0}
-								{/if}
-								</a>
-							{else}
-								{$post.file}.{$post.file_type}</a>
-							{/if}
+							{$post.file}.{$post.file_type}</a>
 							- ({$post.file_size_formatted}
 							{if $post.id3.comments_html.bitrate neq 0 || $post.id3.audio.sample_rate neq 0}
 								{if $post.id3.audio.bitrate neq 0}
@@ -284,14 +259,11 @@
 							{if $post.file_original neq '' && $post.file_original neq $post.file}
 								, {$post.file_original}.{$post.file_type}
 								<a class="reversesearch" target="_blank" href="{t}https://iqdb.org/?url={/t}{$file_path}/thumb/{$post.file}s.{$post.file_type}"> [iqdb]</a>
-							{/if}
-							{if $post.id3.playtime_string neq ''}
-								{t}Length{/t}: {$post.id3.playtime_string}
 							{/if})
 							</span>
 							{if %KU_THUMBMSG}
 								<span class="thumbnailmsg"> 
-								{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'png' && $post.videobox eq ''}
+								{if $post.file_type neq 'jpg' && $post.file_type neq 'gif' && $post.file_type neq 'webp' && $post.file_type neq 'png' && $post.videobox eq ''}
 									{t}Extension icon displayed, click image to open file.{/t}
 								{else}
 									{t}Thumbnail displayed, click image for full size.{/t}
@@ -300,7 +272,7 @@
 							{/if}
 
 						{/if}
-						{if $post.videobox eq '' && $post.file neq '' && ( $post.file_type eq 'jpg' || $post.file_type eq 'gif' || $post.file_type eq 'png')}
+						{if $post.videobox eq '' && $post.file neq '' && ( $post.file_type eq 'jpg' || $post.file_type eq 'webp' || $post.file_type eq 'gif' || $post.file_type eq 'png')}
 							<br />
 							{if $post.file eq 'removed'}
 								<div class="nothumb">
@@ -335,6 +307,26 @@
 		{/if}
 		{if $post.file_type eq 'mp3'}
 			<audio controls preload="metadata"><source src="{$file_path}/src/{$post.file|utf8_encode|urlencode}.mp3" type="audio/mpeg">{t}You are seeing this because your browser does not support the HTML5 Audio element.{/t}</audio>
+			<details class="filesize audiodata">
+			<summary>{t}Metadata{/t}</summary><br />
+			{if isset($post.id3.comments_html)}
+				<span class="audiotitle">
+				{if $post.id3.comments_html.artist.0 neq ''}
+					{$post.id3.comments_html.artist.0}
+					{if $post.id3.comments_html.title.0 neq ''}
+						- 
+					{/if}
+				{/if}
+				{if $post.id3.comments_html.title.0 neq ''}
+					{$post.id3.comments_html.title.0}
+				{/if}
+				</span>
+				<br />
+			{/if}
+			{if $post.id3.playtime_string neq ''}
+				{t} [Length:{/t} {$post.id3.playtime_string}{t}]{/t}
+			{/if} 
+			</details>
 		{/if}
 		<blockquote>
 		{if $post.videobox}
