@@ -204,14 +204,7 @@ class Upload {
 							/* Fetch the mime requirement for this special filetype */
 							$filetype_required_mime = $tc_db->GetOne("SELECT `mime` FROM `" . KU_DBPREFIX . "filetypes` WHERE `filetype` = " . $tc_db->qstr(substr($this->file_type, 1)));
 
-							$this->file_name = htmlspecialchars_decode($this->file_name, ENT_QUOTES);
-							$this->file_name = stripslashes($this->file_name);
-							$this->file_name = str_replace("\x80", " ", $this->file_name);					
-							$this->file_name = str_replace(' ', '_', $this->file_name);
-							$this->file_name = str_replace('#', '(number)', $this->file_name);
-							$this->file_name = str_replace('@', '(at)', $this->file_name);
-							$this->file_name = str_replace('/', '(fwslash)', $this->file_name);
-							$this->file_name = str_replace('\\', '(bkslash)', $this->file_name);
+							$this->file_name = time() . mt_rand(1, 99);
 
 							/* If this board has a load balance url and password configured for it, attempt to use it */
 							if ($board_class->board['loadbalanceurl'] != '' && $board_class->board['loadbalancepassword'] != '') {

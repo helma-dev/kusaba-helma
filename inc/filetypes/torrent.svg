@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+ <defs id="defs4">
+  <linearGradient inkscape:collect="always" xlink:href="#linearGradient4300-9" id="linearGradient4306" y1="61" y2="3" x2="0" gradientUnits="userSpaceOnUse"/>
+  <linearGradient inkscape:collect="always" xlink:href="#linearGradient4410" id="linearGradient4427" y1="31" x1="54" y2="17" x2="40" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 -14 78)"/>
+  <linearGradient inkscape:collect="always" id="linearGradient4410">
+   <stop style="stop-color:#383e51" id="stop4412"/>
+   <stop offset="1" style="stop-color:#655c6f;stop-opacity:0" id="stop4414"/>
+  </linearGradient>
+  <linearGradient inkscape:collect="always" xlink:href="#linearGradient4351-6" id="linearGradient4357" y1="61" y2="47" x2="0" gradientUnits="userSpaceOnUse"/>
+  <linearGradient inkscape:collect="always" id="linearGradient4351-6">
+   <stop style="stop-color:#036b53" id="stop4353-9"/>
+   <stop offset="1" style="stop-color:#036b53" id="stop4355-1"/>
+  </linearGradient>
+  <linearGradient inkscape:collect="always" id="linearGradient4300-9">
+   <stop style="stop-color:#26c281" id="stop4302-0"/>
+   <stop offset="1" style="stop-color:#3fc380" id="stop4304-3"/>
+  </linearGradient>
+ </defs>
+ <metadata id="metadata84"/>
+ <path style="fill:url(#linearGradient4306)" id="rect3500" d="M 10 3 L 10 61 L 40 61 L 54 47 L 54 17 L 54 3 L 40 3 L 10 3 z "/>
+ <rect width="30" x="10" y="60" height="1" style="fill:#2e3132;fill-opacity:0.294118" id="rect4169"/>
+ <rect width="44" x="10" y="3" height="1" style="fill:#ffffff;fill-opacity:0.409836" id="rect4236"/>
+ <path inkscape:connector-curvature="0" style="fill:url(#linearGradient4357);fill-rule:evenodd" id="path4314" d="M 54,47 40,61 40,47 Z"/>
+ <path inkscape:connector-curvature="0" style="fill:url(#linearGradient4427);opacity:0.2;fill-rule:evenodd" id="path4320" d="M 26,61 40,47 40,61 Z"/>
+ <path style="shape-rendering:auto;color-interpolation-filters:linearRGB;fill:#036b53;image-rendering:auto;text-rendering:auto;color:#000000;color-rendering:auto;color-interpolation:sRGB" id="rect4204" d="M 29 21 L 29 22 L 29 29 L 30 29 L 30 22 L 34 22 L 34 29 L 35 29 L 35 22 L 35 21 L 29 21 z M 23.707031 28 L 23 28.707031 L 32 37.707031 L 41 28.707031 L 40.292969 28 L 32 36.292969 L 23.707031 28 z M 21 40 L 21 42 L 21 43 L 22 43 L 43 43 L 43 42 L 43 40 L 42 40 L 42 42 L 22 42 L 22 40 L 21 40 z "/>
+</svg>

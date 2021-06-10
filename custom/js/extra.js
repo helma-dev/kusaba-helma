@@ -357,3 +357,57 @@ var tr = links[i].href.substring(links[i].href.lastIndexOf('/')+1, links[i].href
 /**
 * End backlinks.js
 */
+
+/**
+* Color IDs
+* From vichan, modified
+*/
+jQuery(document).ready(function($) {
+        if (localStorage.getItem('colorIds') == 'true') {
+                function IDToRGB(id_str){
+                        var id = id_str.match(/.{1,2}/g);
+                        var rgb = new Array();
+                        for (i = 0; i < id.length; i++) {
+                                rgb[i] = id[i];
+                        }
+                        return rgb;
+                }
+                function IDToRGB_Font(id_str){
+                        var id = id_str.match(/.{1,2}/g);
+                        var rgb_font = new Array();
+                        for (i = 0; i < id.length; i++) {
+                                rgb_font[i] = parseInt(id[i], 16);
+                        }
+                        return rgb_font;
+                }
+                function IDToRGB_Font(id_str){
+                        var id = id_str.match(/.{1,2}/g);
+                        var rgb_font = new Array();
+                        for (i = 0; i < id.length; i++) {
+                                rgb_font[i] = parseInt(id[i], 16);
+                        }
+                        return rgb_font;
+                }
+                function colorPostId(el) {
+                        var rgb = IDToRGB($(el).text());
+                        var rgb_font = IDToRGB_Font($(el).text());
+                        var ft = "#fff";
+
+                        if ((rgb_font[2]*0.299 + rgb_font[3]*0.587 + rgb_font[4]*0.114) > 125)
+                                ft = "#000";
+
+                        $(el).css({
+                                "background-color": "#"+rgb[2]+rgb[3]+rgb[4],
+                                "padding": "0px 3px",
+                                "border-radius": "3px",
+                                "color": ft
+                        });
+                }
+                $(".posterid").each(function(k, v){
+                        colorPostId(v);
+                });
+        }
+});
+/**
+* End color IDs
+*/

@@ -204,6 +204,10 @@ margin-top:-8px;
 .reversesearch{ display:none}
 .filesize:hover > .reversesearch{ display:contents }
 acronym{text-decoration:underline dotted!important}
+
+.reply audio{margin-top: 2px;} 
+.audiotitle{font-weight:bold}
+summary{cursor: pointer}
 /* Mobile */
 @media only screen and (max-width:640px) {
 html {
